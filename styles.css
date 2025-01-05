@@ -79,3 +79,20 @@ footer {
     max-width: 600px;
     margin: 0 auto;
 }
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.social-icon {
+    color: #333;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    color: #0066cc;
+}
