@@ -9,7 +9,7 @@ body {
 header {
     background: #333;
     color: #fff;
-    padding: 10px 20px;
+    padding: 4rem 1rem;
     text-align: center;
 }
 
@@ -41,7 +41,7 @@ footer {
     background: #333;
     color: #fff;
     text-align: center;
-    padding: 20px 0;
+    padding: 1rem;
     margin-top: 20px;
 }
 
@@ -95,4 +95,31 @@ footer {
 .social-icon:hover {
     transform: translateY(-3px);
     color: #0066cc;
+}
+
+/* Add responsive styles */
+@media (max-width: 768px) {
+    .skill-icon {
+        font-size: 2rem !important;
+    }
+    
+    .row.text-center {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .social-links {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .section-padding {
+        padding: 40px 0;
+    }
 }
