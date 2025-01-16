@@ -238,15 +238,15 @@ footer {
 }
 
 .navbar-brand {
-    color: var(--navbar-text-color) !important;
+    color: #212529 !important; /* Default light theme color */
 }
 
 [data-theme="dark"] .navbar-brand {
-    --navbar-text-color: #ffffff;
+    color: #ffffff !important;
 }
 
 [data-theme="light"] .navbar-brand {
-    --navbar-text-color: #212529;
+    color: #212529 !important;
 }
 
 /* Theme Switch Styles */
