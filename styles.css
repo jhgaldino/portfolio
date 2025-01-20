@@ -10,10 +10,21 @@ body {
 }
 
 header {
-    background: #333;
-    color: #fff;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
     padding: 4rem 1rem;
     text-align: center;
+    transition: all 0.3s ease;
+}
+
+[data-theme="light"] header {
+    background: #f8f9fa;
+    color: #212529;
+}
+
+[data-theme="dark"] header {
+    background: #333;
+    color: #fff;
 }
 
 nav ul {
