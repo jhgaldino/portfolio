@@ -106,7 +106,7 @@
                 </div>
                 <div class="col">
                     <i class="fas fa-project-diagram skill-icon fa-3x"></i>
-                    <p>RabbitMQ</p>
+                    <p>Flask</p>
                 </div>
                 <div class="col">
                     <i class="fab fa-bootstrap skill-icon fa-3x"></i>
@@ -126,20 +126,25 @@
     
 
     <section id="projetos" class="section-padding">
-        <div class="container">
-            <h2 class="text-center mb-5">Projetos</h2>
-            <div class="row g-4">
-                <div class="col-md-6">
-                    <div class="card project-card h-100">
+    <div class="container">
+        <h2 class="text-center mb-5">Projetos</h2>
+        
+        <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- First Slide -->
+                <div class="carousel-item active">
+                    <div class="card project-card">
                         <div class="card-body">
                             <h5 class="card-title">Restaurante XPTO</h5>
-                                <p class="card-text">Sistema de Gerenciamento de Pedidos de Restaurante. Com validação de pedidos e controle de horário de refeições. Com API em .NET e Frontend em Angular.</p>
+                            <p class="card-text">Sistema de Gerenciamento de Pedidos de Restaurante. Com validação de pedidos e controle de horário de refeições. Com API em .NET e Frontend em Angular.</p>
                             <a href="https://github.com/jhgaldino/Xpto" class="btn btn-primary" target="_blank">Ver Projeto</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="card project-card h-100">
+
+                <!-- Other Slides -->
+                <div class="carousel-item">
+                    <div class="card project-card">
                         <div class="card-body">
                             <h5 class="card-title">API de Usuários</h5>
                             <p class="card-text">API REST desenvolvida com ASP.NET Core para gerenciamento de usuários, incluindo autenticação e autorização.</p>
@@ -147,45 +152,64 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="card project-card h-100">
+                <div class="carousel-item">
+                    <div class="card project-card">
                         <div class="card-body">
                             <h5 class="card-title">Microblog Flask</h5>
-                            <p class="card-text">Aplicação web de microblog desenvolvida com Python/Flask, demonstrando operações CRUD e autenticação.</p>
-                            <a href="https://github.com/jhgaldino/microblog-flask" class="btn btn-primary" target="_blank">Ver Projeto</a>
+                            <p class="card-text">Microblog desenvolvido com Flask, um framework de Python. Com autenticação de usuários e posts.</p>
+                            <a href="https://github.com/jhgaldino/Microblog-Flask" class="btn btn-primary" target="_blank">Ver Projeto</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="card project-card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Redes Neurais</h5>
-                            <p class="card-text">Implementação de redes neurais para análise e processamento de dados utilizando Python.</p>
-                            <a href="https://github.com/jhgaldino/Neural-Networks" class="btn btn-primary" target="_blank">Ver Projeto</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card project-card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Bot Discord/Telegram</h5>
-                            <p class="card-text">Bot integrado para Discord e Telegram desenvolvido em Python, permitindo interação entre as plataformas.</p>
-                            <a href="https://github.com/jhgaldino/discord_telegram_bot" class="btn btn-primary" target="_blank">Ver Projeto</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card project-card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">WebScrapping</h5>
-                            <p class="card-text">Ferramenta de Web Scraping para acessar um site específico, baixar um arquivo PDF e converter os dados do PDF para CSV.</p>
-                            <a href="https://github.com/jhgaldino/WebScrapping" class="btn btn-primary" target="_blank">Ver Projeto</a>
-                        </div>
+            <div class="carousel-item">
+                <div class="card project-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Redes Neurais</h5>
+                        <p class="card-text">Implementação de Redes Neurais com Python, Pandas e Pytorch para previsão de resultados de partidas de futebol.</p>
+                        <a href="https://github.com/jhgaldino/Neural-Networks" class="btn btn-primary" target="_blank">Ver Projeto</a>
                     </div>
                 </div>
             </div>
+            <div class="carousel-item">
+                <div class="card project-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Bot de Integração Discord-Telegram </h5>
+                        <p class="card-text">Bot desenvolvido com Python para integração entre os aplicativos Discord e Telegram.</p>
+                        <a href="https://github.com/jhgaldino/discord_telegram_bot" class="btn btn-primary" target="_blank">Ver Projeto</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card project-card">
+                    <div class="card-body">
+                        <h5 class="card-title">WebScrapping com Python</h5>
+                        <p class="card-text">WebScrapping de dados de um site de saúde com Python</p>
+                        <a href="https://github.com/jhgaldino/WebScrapping" class="btn btn-primary" target="_blank">Ver Projeto</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+
+            <!-- Indicators -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <section id="educacao" class="section-padding">
         <div class="container">

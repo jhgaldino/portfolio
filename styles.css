@@ -297,6 +297,7 @@ social-icon:hover {
         justify-content: center;
         margin-bottom: 0.5rem;
     }
+    
 }
 
 section {
@@ -382,4 +383,62 @@ input:checked + .slider {
 
 input:checked + .slider:before {
     transform: translateX(20px);
+}
+
+/* Carousel Styles */
+#projectCarousel {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.carousel-item {
+    padding: 20px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+    opacity: 0.8;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: transparent;
+    border: 2px solid var(--text-primary);
+    border-radius: 50%;
+    padding: 15px;
+}
+
+[data-theme="light"] .carousel-control-prev-icon,
+[data-theme="light"] .carousel-control-next-icon {
+    filter: invert(1);
+}
+
+.carousel-indicators {
+    bottom: -50px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+}
+
+.carousel-indicators button {
+    background-color: var(--text-primary) !important;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+#projectCarousel .project-card {
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+#projectCarousel .card-body {
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
