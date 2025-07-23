@@ -175,6 +175,15 @@ social-icon:hover {
     color: var(--text-secondary) !important;
 }
 
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: #0056b3;
+}
+
 @media (max-width: 768px) {
     .skill-icon {
         font-size: 2rem !important;
@@ -386,6 +395,73 @@ input:checked + .slider:before {
     transform: translateX(20px);
 }
 
+/* Language switcher styles */
+.language-switch-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.language-icons {
+    display: flex;
+    justify-content: space-between;
+    width: 60px; /* Increased from 48px */
+    margin-bottom: 5px;
+}
+
+.flag-icon {
+    width: 24px;
+    height: 18px;
+    object-fit: cover;
+}
+
+.language-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px; /* Increased from 40px */
+    height: 24px; /* Increased from 20px */
+}
+
+.language-switch .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #009b3a;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.language-switch .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px; /* Increased from 16px */
+    width: 16px; /* Increased from 16px */
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+.language-switch input:checked + .slider:before {
+    transform: translateX(32px); /* Adjusted for new width */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .language-switch-wrapper {
+        margin: 10px 0;
+    }
+    
+    .navbar-nav {
+        margin-bottom: 10px;
+    }
+}
+
 /* Carousel Styles */
 #projectCarousel {
     max-width: 800px;
@@ -456,6 +532,7 @@ input:checked + .slider:before {
     border: none;
     cursor: pointer;
     opacity: 0;
+    visibility: hidden;
     transition: all 0.3s ease;
     z-index: 1000;
     display: flex;
@@ -492,4 +569,28 @@ input:checked + .slider:before {
         width: 35px;
         height: 35px;
     }
+}
+
+.dropdown-menu {
+    min-width: 150px;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+}
+
+.dropdown-item {
+    color: var(--text-primary);
+    padding: 0.5rem 1rem;
+}
+
+.dropdown-item:hover {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+#selected-language {
+    margin-left: 8px;
+}
+
+.nav-link.dropdown-toggle::after {
+    margin-left: 8px;
 }
