@@ -17,7 +17,8 @@ const translations = {
         viewProject: 'Ver Github',
         footer: 'Todos os direitos reservados.',
         cvFile: 'CV JONATHAN HENRIQUE - T.i.pdf',
-        contato: 'Contato'
+        contato: 'Contato',
+        projectButton: 'Ver Projeto'
     },
     en: {
         title: 'Jonathan Galdino | Portfolio',
@@ -99,7 +100,18 @@ class LanguageManager {
         document.querySelectorAll('[data-translate]').forEach(element => {
             const key = element.getAttribute('data-translate');
             if (translations[lang][key]) {
-                element.textContent = translations[lang][key];
+                // Se o elemento for um span dentro de um botão, atualizamos o nó de texto para não remover o ícone
+                if (element.tagName === 'SPAN' && element.parentElement.tagName === 'A') {
+                     // Encontra e atualiza o nó de texto para não apagar o ícone
+                    for (const node of element.parentElement.childNodes) {
+                        if (node.nodeType === Node.TEXT_NODE) {
+                            node.textContent = ' ' + translations[lang][key];
+                            break;
+                        }
+                    }
+                } else {
+                     element.textContent = translations[lang][key];
+                }
             }
         });
 
@@ -107,19 +119,27 @@ class LanguageManager {
         const cvButton = document.getElementById('cv-download');
         if (cvButton) {
             cvButton.href = translations[lang].cvFile;
+            // A tradução do texto do botão de CV já é feita pelo [data-translate]
         }
 
         // Update page title and language
         document.title = translations[lang].title;
         document.documentElement.lang = lang;
 
-        // Update project buttons
-        document.querySelectorAll('.btn-primary[href*="github"]').forEach(button => {
-            const icon = button.querySelector('i');
-            const text = translations[lang].viewProject;
-            button.innerHTML = '';
-            button.appendChild(icon);
-            button.innerHTML += ' ' + text;
+        // *** INÍCIO DA CORREÇÃO 2: Tornar o seletor mais específico ***
+        // Atualiza apenas o botão de GitHub na secção "Sobre", que não usa data-translate
+        document.querySelectorAll('#sobre .btn-primary[href*="github"]').forEach(button => {
+            // Este seletor agora é específico e não afetará os botões do carrossel.
+            // Verifica se o botão não tem o atributo data-translate para não haver conflito.
+            if (!button.hasAttribute('data-translate')) {
+                const icon = button.querySelector('i');
+                const text = "GitHub"; // O texto é fixo, não precisa de tradução neste caso específico
+                button.innerHTML = ''; 
+                if (icon) {
+                    button.appendChild(icon);
+                }
+                button.innerHTML += ' ' + text;
+            }
         });
     }
 
@@ -130,12 +150,8 @@ class LanguageManager {
                 const lang = item.getAttribute('data-lang');
                 const flag = item.querySelector('img').src;
                 const text = item.textContent.trim();
-                
-                // Update selected language display
                 document.getElementById('selected-language-flag').src = flag;
                 document.getElementById('selected-language').textContent = text;
-                
-                // Save and update language
                 document.documentElement.setAttribute('data-lang', lang);
                 localStorage.setItem('lang', lang);
                 this.updateContent(lang);
