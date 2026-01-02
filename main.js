@@ -6,6 +6,7 @@ const translations = {
         about: 'Sobre',
         skills: 'Habilidades',
         projects: 'Projetos',
+        experience: 'Experiência',
         education: 'Educação',
         bachelor: 'Bacharelado em Ciência da Computação',
         university: 'Instituto Federal do Triângulo Mineiro - Campus Ituiutaba - Ituiutaba, Minas Gerais - Brasil',
@@ -17,8 +18,32 @@ const translations = {
         viewProject: 'Ver Github',
         footer: 'Todos os direitos reservados.',
         cvFile: 'CV JONATHAN HENRIQUE - T.i.pdf',
-        contato: 'Contato',
-        projectButton: 'Ver Projeto'
+        projectButton: 'Ver Projeto',
+        projectXPTOTitle: 'Restaurante XPTO',
+        projectXPTODesc: 'Sistema de Gerenciamento de Pedidos de Restaurante. Com validação de pedidos e controle de horário de refeições. Com API em .NET e Frontend em Angular.',
+        projectAPITitle: 'API de Usuários',
+        projectAPIDesc: 'API REST desenvolvida com ASP.NET Core para gerenciamento de usuários, incluindo autenticação e autorização.',
+        projectMicroblogTitle: 'Microblog Flask',
+        projectMicroblogDesc: 'Microblog desenvolvido com Flask, um framework de Python. Com autenticação de usuários e posts.',
+        projectNeuralTitle: 'Redes Neurais',
+        projectNeuralDesc: 'Implementação de Redes Neurais com Python, Pandas e Pytorch para previsão de resultados de partidas de futebol.',
+        projectBotTitle: 'Bot de Integração Discord-Telegram',
+        projectBotDesc: 'Bot desenvolvido com Python para integração entre os aplicativos Discord e Telegram.',
+        projectWebScrapTitle: 'WebScrapping com Python',
+        projectWebScrapDesc: 'WebScrapping de dados de um site de saúde com Python',
+        // Experience
+        job1Title: 'Analista Desenvolvedor I',
+        job1Company: 'Qintess · Tempo integral',
+        job1Period: 'Fev 2025 - Presente',
+        job1Location: 'Brasília, DF - Remoto',
+        job1Desc: 'Atuação no time do Instituto Nacional de Colonização e Reforma Agrária (Incra). Desenvolvimento, manutenção e aprimoramento de sistemas legado e banco de dados usando .NET, ASP Clássico, SQL Server, Oracle DB, Git e GitLab. CI/CD e integração contínua.',
+        job2Title: 'Desenvolvedor Back End .NET',
+        job2Company: 'Viceri-SEIDOR · Trainee',
+        job2Period: 'Jun 2024 - Dez 2024 · 7 meses',
+        job2Location: 'Jundiaí, SP - Híbrido',
+        job2Desc: 'Desenvolvimento e manutenção de sistemas para o setor de seguros, utilizando .NET, C#, ASP Clássico, Oracle DB, SQL Server, Angular, Java e APIs SOAP. Atuação em projetos colaborativos com equipes multidisciplinares, empregando Azure DevOps, Bitbucket e Git, além de metodologias ágeis (Scrum).',
+        // Contact Form
+        contactText: 'Entre em contato comigo através das redes sociais abaixo'
     },
     en: {
         title: 'Jonathan Galdino | Portfolio',
@@ -26,6 +51,7 @@ const translations = {
         about: 'About',
         skills: 'Skills',
         projects: 'Projects',
+        experience: 'Experience',
         education: 'Education',
         bachelor: 'Bachelor of Computer Science',
         university: 'Federal Institute of Triângulo Mineiro - Ituiutaba Campus - Ituiutaba, Minas Gerais - Brazil',
@@ -37,9 +63,9 @@ const translations = {
         viewProject: 'View Github Projects',
         footer: 'All rights reserved.',
         cvFile: 'JONATHAN GALDINO-ENGLISH.pdf',
-        contato: 'Contact',
+        projectButton: 'View Project',
         projectXPTOTitle: 'XPTO Restaurant',
-        projectXPTODesc: 'Restaurant Order Management System. With .NET API and Angular Frontend.',
+        projectXPTODesc: 'Restaurant Order Management System. With order validation and meal time control. With .NET API and Angular Frontend.',
         projectAPITitle: 'Users API',
         projectAPIDesc: 'REST API developed with ASP.NET Core for user management, including authentication and authorization.',
         projectMicroblogTitle: 'Flask Microblog',
@@ -50,7 +76,19 @@ const translations = {
         projectBotDesc: 'Bot developed with Python for integration between Discord and Telegram applications.',
         projectWebScrapTitle: 'WebScraping with Python',
         projectWebScrapDesc: 'Web scraping of health site data with Python',
-        projectButton: 'View Project'
+        // Experience
+        job1Title: 'Developer Analyst I',
+        job1Company: 'Qintess · Full-time',
+        job1Period: 'Feb 2025 - Present',
+        job1Location: 'Brasília, DF - Remote',
+        job1Desc: 'Working with the National Institute of Colonization and Agrarian Reform (Incra) team. Development, maintenance and improvement of legacy systems and databases using .NET, Classic ASP, SQL Server, Oracle DB, Git and GitLab. CI/CD and continuous integration.',
+        job2Title: 'Back End .NET Developer',
+        job2Company: 'Viceri-SEIDOR · Trainee',
+        job2Period: 'Jun 2024 - Dec 2024 · 7 months',
+        job2Location: 'Jundiaí, SP - Hybrid',
+        job2Desc: 'Development and maintenance of systems for the insurance sector, using .NET, C#, Classic ASP, Oracle DB, SQL Server, Angular, Java and SOAP APIs. Working on collaborative projects with multidisciplinary teams, using Azure DevOps, Bitbucket and Git, as well as agile methodologies (Scrum).',
+        // Contact
+        contactText: 'Get in touch with me through the social networks below'
     }
 };
 
@@ -206,6 +244,14 @@ class BackToTopManager {
 
 // Initialize all functionality when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialize AOS animations
+    AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+        offset: 100
+    });
+
     new ThemeManager();
     new LanguageManager();
     new BackToTopManager();

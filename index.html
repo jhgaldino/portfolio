@@ -4,16 +4,22 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Jonathan Henrique | Portfólio</title>
+        <meta name="description" content="Portfólio de Jonathan Galdino - Desenvolvedor Back-End e Analista de Sistemas especializado em C#, Python, Java, .NET, Flask e AWS Cloud.">
+        <meta name="keywords" content="desenvolvedor, back-end, programador, C#, Python, Java, .NET, Flask, AWS, Angular, SQL Server, Oracle, portfólio">
+        <meta name="author" content="Jonathan Galdino">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
     </head>
 <body>
-    <header>
-        <h1>Jonathan Galdino </h1>
-        <p data-translate="role">Desenvolvedor Back-End e Analista de Sistemas</p>
+    <header class="hero-header">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 data-aos="fade-down" data-aos-duration="1000">Jonathan Galdino</h1>
+            <p data-translate="role" data-aos="fade-up" data-aos-delay="300">Desenvolvedor Back-End e Analista de Sistemas</p>
+        </div>
     </header>
 
     <!-- Update navbar -->
@@ -28,6 +34,7 @@
                     <li class="nav-item"><a class="nav-link" href="#sobre" data-translate="about">Sobre</a></li>
                     <li class="nav-item"><a class="nav-link" href="#habilidades" data-translate="skills">Habilidades</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projetos" data-translate="projects">Projetos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experiencia" data-translate="experience">Experiência</a></li>
                     <li class="nav-item"><a class="nav-link" href="#educacao" data-translate="education">Educação</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contato" data-translate="contact">Contato</a></li>
                     <!-- Language Dropdown -->
@@ -71,18 +78,19 @@
 
     <section id="sobre" class="section-padding">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4">
+            <div class="row align-items-center">
+                <div class="col-md-4" data-aos="fade-right">
                     <img src="https://avatars.githubusercontent.com/u/21108827?s=400&u=a4fb734211a612d0fa5287f53f7caf678251345f&v=4" 
-                         class="img-fluid rounded-circle">
+                         class="img-fluid rounded-circle" 
+                         alt="Foto de perfil de Jonathan Galdino, Desenvolvedor Back-End"
+                         loading="lazy">
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-8" data-aos="fade-left">
                     <h2 class="mb-4" data-translate="aboutMe">Sobre Mim</h2>
                     <p class="lead" data-translate="aboutText">Sou um desenvolvedor back-end apaixonado por criar soluções tecnológicas eficientes e escaláveis.
                         Atuação no desenvolvimento de software, priorizando soluções de alta performance. Experiência na criação de interfaces web responsivas,
                         sempre focada na entrega de resultados alinhados às necessidades do negócio.
                     </p>
-                    <!-- CV and GitHub buttons -->
                     <a href="CV JONATHAN HENRIQUE - T.i.pdf" download class="btn btn-primary mt-3" id="cv-download" data-translate="downloadCV">
                         <i class="fas fa-download me-2"></i><span>Baixar Currículo</span>
                     </a>
@@ -96,8 +104,8 @@
 
     <section id="habilidades" class="section-padding">
         <div class="container text-center">
-            <h2 class="mb-5" data-translate="skills">Habilidades</h2>
-            <div class="row text-center">
+            <h2 class="mb-5" data-aos="fade-up" data-translate="skills">Habilidades</h2>
+            <div class="row text-center" data-aos="fade-up" data-aos-delay="200"></div>
                 <div class="col">
                     <i class="fas fa-code skill-icon fa-3x"></i>
                     <p>C#</p>
@@ -145,13 +153,12 @@
 
     <section id="projetos" class="section-padding">
     <div class="container">
-        <h2 class="text-center mb-5" data-translate="projects">Projetos</h2>
+        <h2 class="text-center mb-5" data-aos="fade-up" data-translate="projects">Projetos</h2>
         
-        <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <!-- First Slide -->
-                <div class="carousel-item active">
-                    <div class="card project-card">
+        <div class="projects-grid" data-aos="fade-up" data-aos-delay="200">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card project-card h-100">
                         <div class="card-body">
                             <h5 class="card-title" data-translate="projectXPTOTitle">Restaurante XPTO</h5>
                             <p class="card-text" data-translate="projectXPTODesc">Sistema de Gerenciamento de Pedidos de Restaurante. Com validação de pedidos e controle de horário de refeições. Com API em .NET e Frontend em Angular.</p>
@@ -159,8 +166,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <div class="card project-card">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card project-card h-100">
                         <div class="card-body">
                             <h5 class="card-title" data-translate="projectAPITitle">API de Usuários</h5>
                             <p class="card-text" data-translate="projectAPIDesc">API REST desenvolvida com ASP.NET Core para gerenciamento de usuários, incluindo autenticação e autorização.</p>
@@ -168,8 +175,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <div class="card project-card">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card project-card h-100">
                         <div class="card-body">
                             <h5 class="card-title" data-translate="projectMicroblogTitle">Microblog Flask</h5>
                             <p class="card-text" data-translate="projectMicroblogDesc">Microblog desenvolvido com Flask, um framework de Python. Com autenticação de usuários e posts.</p>
@@ -177,59 +184,83 @@
                         </div>
                     </div>
                 </div>
-            <div class="carousel-item">
-                <div class="card project-card">
-                    <div class="card-body">
-                        <h5 class="card-title" data-translate="projectNeuralTitle">Redes Neurais</h5>
-                        <p class="card-text" data-translate="projectNeuralDesc">Implementação de Redes Neurais com Python, Pandas e Pytorch para previsão de resultados de partidas de futebol.</p>
-                        <a href="https://github.com/jhgaldino/Neural-Networks" class="btn btn-primary" target="_blank" data-translate="projectButton">Ver Projeto</a>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card project-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title" data-translate="projectNeuralTitle">Redes Neurais</h5>
+                            <p class="card-text" data-translate="projectNeuralDesc">Implementação de Redes Neurais com Python, Pandas e Pytorch para previsão de resultados de partidas de futebol.</p>
+                            <a href="https://github.com/jhgaldino/Neural-Networks" class="btn btn-primary" target="_blank" data-translate="projectButton">Ver Projeto</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="carousel-item">
-                <div class="card project-card">
-                    <div class="card-body">
-                        <h5 class="card-title" data-translate="projectBotTitle">Bot de Integração Discord-Telegram </h5>
-                        <p class="card-text" data-translate="projectBotDesc">Bot desenvolvido com Python para integração entre os aplicativos Discord e Telegram.</p>
-                        <a href="https://github.com/jhgaldino/discord_telegram_bot" class="btn btn-primary" target="_blank" data-translate="projectButton">Ver Projeto</a>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card project-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title" data-translate="projectBotTitle">Bot de Integração Discord-Telegram</h5>
+                            <p class="card-text" data-translate="projectBotDesc">Bot desenvolvido com Python para integração entre os aplicativos Discord e Telegram.</p>
+                            <a href="https://github.com/jhgaldino/discord_telegram_bot" class="btn btn-primary" target="_blank" data-translate="projectButton">Ver Projeto</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="carousel-item">
-                <div class="card project-card">
-                    <div class="card-body">
-                        <h5 class="card-title" data-translate="projectWebScrapTitle">WebScrapping com Python</h5>
-                        <p class="card-text" data-translate="projectWebScrapDesc">WebScrapping de dados de um site de saúde com Python</p>
-                        <a href="https://github.com/jhgaldino/WebScrapping" class="btn btn-primary" target="_blank" data-translate="projectButton">Ver Projeto</a>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card project-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title" data-translate="projectWebScrapTitle">WebScrapping com Python</h5>
+                            <p class="card-text" data-translate="projectWebScrapDesc">WebScrapping de dados de um site de saúde com Python</p>
+                            <a href="https://github.com/jhgaldino/WebScrapping" class="btn btn-primary" target="_blank" data-translate="projectButton">Ver Projeto</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- Controls -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-
-            <!-- Indicators -->
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
             </div>
         </div>
     </div>
 </section>
 
+    <section id="experiencia" class="section-padding">
+        <div class="container">
+            <h2 class="text-center mb-5" data-aos="fade-up" data-translate="experience">Experiência Profissional</h2>
+            
+            <div class="timeline" data-aos="fade-up" data-aos-delay="200">
+                <div class="timeline-item">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-briefcase fa-2x me-3 text-primary"></i>
+                                <div>
+                                    <h5 class="card-title mb-0" data-translate="job1Title">Analista Desenvolvedor I</h5>
+                                    <h6 class="card-subtitle text-muted" data-translate="job1Company">Qintess · Tempo integral</h6>
+                                </div>
+                            </div>
+                            <p class="text-muted mb-2"><i class="fas fa-calendar-alt me-2"></i><span data-translate="job1Period">Fev 2025 - Presente</span></p>
+                            <p class="text-muted mb-2"><i class="fas fa-map-marker-alt me-2"></i><span data-translate="job1Location">Brasília, DF - Remoto</span></p>
+                            <p class="card-text" data-translate="job1Desc">Atuação no time do Instituto Nacional de Colonização e Reforma Agrária (Incra). Desenvolvimento, manutenção e aprimoramento de sistemas legado e banco de dados usando .NET, ASP Clássico, SQL Server, Oracle DB, Git e GitLab. CI/CD e integração contínua.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-briefcase fa-2x me-3 text-primary"></i>
+                                <div>
+                                    <h5 class="card-title mb-0" data-translate="job2Title">Desenvolvedor Back End .NET</h5>
+                                    <h6 class="card-subtitle text-muted" data-translate="job2Company">Viceri-SEIDOR · Trainee</h6>
+                                </div>
+                            </div>
+                            <p class="text-muted mb-2"><i class="fas fa-calendar-alt me-2"></i><span data-translate="job2Period">Jun 2024 - Dez 2024 · 7 meses</span></p>
+                            <p class="text-muted mb-2"><i class="fas fa-map-marker-alt me-2"></i><span data-translate="job2Location">Jundiaí, SP - Híbrido</span></p>
+                            <p class="card-text" data-translate="job2Desc">Desenvolvimento e manutenção de sistemas para o setor de seguros, utilizando .NET, C#, ASP Clássico, Oracle DB, SQL Server, Angular, Java e APIs SOAP. Atuação em projetos colaborativos com equipes multidisciplinares, empregando Azure DevOps, Bitbucket e Git, além de metodologias ágeis (Scrum).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="educacao" class="section-padding">
         <div class="container">
-            <h2 class="text-center mb-5" data-translate="education">Educação</h2>
+            <h2 class="text-center mb-5" data-aos="fade-up" data-translate="education">Educação</h2>
             
             <!-- Educação -->
             <div class="row mb-5">
@@ -249,8 +280,8 @@
             </div>
 
             <section id="certificacoes" class="section-padding">
-            <h3 class="text-center mb-4" data-translate="certifications">Certificações</h3>
-            <div class="row g-4">
+            <h3 class="text-center mb-4" data-aos="fade-up" data-translate="certifications">Certificações</h3>
+            <div class="row g-4" data-aos="fade-up" data-aos-delay="200">
                 <div class="col-md-4">
                     <div class="card h-100">
                         <div class="card-body">
@@ -284,32 +315,37 @@
 
     <section id="contato" class="section-padding">
         <div class="container text-center">
-            <h2 class="mb-5" data-translate="contact">Contato</h2>
-            <div class="social-links">
-                <a href="https://wa.me/5511941069442" target="_blank" class="social-icon">
-                    <i class="fab fa-whatsapp fa-2x"></i>
+            <h2 class="mb-5" data-aos="fade-up" data-translate="contact">Contato</h2>
+            
+            <p class="lead mb-4" data-aos="fade-up" data-aos-delay="100" data-translate="contactText">Entre em contato comigo através das redes sociais abaixo</p>
+            
+            <div class="social-links" data-aos="fade-up" data-aos-delay="200">
+                <a href="https://wa.me/5511941069442" target="_blank" class="social-icon" aria-label="Entrar em contato pelo WhatsApp">
+                    <i class="fab fa-whatsapp fa-2x" aria-hidden="true"></i>
                 </a>
-                <a href="mailto:contato.jhgs@gmail.com" class="social-icon">
-                    <i class="fas fa-envelope fa-2x"></i>
+                <a href="mailto:contato.jhgs@gmail.com" class="social-icon" aria-label="Enviar e-mail para Jonathan">
+                    <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/jhgaldino" target="_blank" class="social-icon">
-                    <i class="fab fa-linkedin fa-2x"></i>
+                <a href="https://www.linkedin.com/in/jhgaldino" target="_blank" class="social-icon" aria-label="Perfil do LinkedIn de Jonathan Galdino">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
                 </a>
-                <a href="https://www.instagram.com/poliekos" target="_blank" class="social-icon">
-                    <i class="fab fa-instagram fa-2x"></i>
+                <a href="https://www.instagram.com/poliekos" target="_blank" class="social-icon" aria-label="Perfil do Instagram de Jonathan">
+                    <i class="fab fa-instagram fa-2x" aria-hidden="true"></i>
                 </a>
             </div>
         </div>
     </section>
 
-    <footer data-translate="footer">
-        <p>&copy; 2025 Jonathan Galdino. Todos os direitos reservados.</p>
+    <footer>
+        <p>&copy; 2025 Jonathan Galdino. <span data-translate="footer">Todos os direitos reservados.</span></p>
     </footer>
 
     <button id="backToTop" class="back-to-top">
         <i class="fas fa-arrow-up"></i>
     </button>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
