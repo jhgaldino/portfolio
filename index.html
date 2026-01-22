@@ -7,6 +7,7 @@
         <meta name="description" content="Portfólio de Jonathan Galdino - Desenvolvedor Back-End e Analista de Sistemas especializado em C#, Python, Java, .NET, Flask e AWS Cloud.">
         <meta name="keywords" content="desenvolvedor, back-end, programador, C#, Python, Java, .NET, Flask, AWS, Angular, SQL Server, Oracle, portfólio">
         <meta name="author" content="Jonathan Galdino">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://unpkg.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com; img-src 'self' https://avatars.githubusercontent.com https://flagcdn.com data:; font-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; frame-ancestors 'self'">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
@@ -40,19 +41,19 @@
                     <!-- Language Dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="https://flagcdn.com/24x18/br.png" alt="Português" class="flag-icon me-1" id="selected-language-flag">
+                            <img src="https://flagcdn.com/24x18/br.png" alt="Português" class="flag-icon me-1" id="selected-language-flag" referrerpolicy="no-referrer">
                             <span id="selected-language">Português</span>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
                             <li>
                                 <a class="dropdown-item d-flex align-items-center" href="#" data-lang="pt">
-                                    <img src="https://flagcdn.com/24x18/br.png" alt="Português" class="flag-icon me-2">
+                                    <img src="https://flagcdn.com/24x18/br.png" alt="Português" class="flag-icon me-2" referrerpolicy="no-referrer">
                                     Português
                                 </a>
                             </li>
                             <li>
                                 <a class="dropdown-item d-flex align-items-center" href="#" data-lang="en">
-                                    <img src="https://flagcdn.com/24x18/gb.png" alt="English" class="flag-icon me-2">
+                                    <img src="https://flagcdn.com/24x18/gb.png" alt="English" class="flag-icon me-2" referrerpolicy="no-referrer">
                                     English
                                 </a>
                             </li>
@@ -83,7 +84,8 @@
                     <img src="https://avatars.githubusercontent.com/u/21108827?s=400&u=a4fb734211a612d0fa5287f53f7caf678251345f&v=4" 
                          class="img-fluid rounded-circle" 
                          alt="Foto de perfil de Jonathan Galdino, Desenvolvedor Back-End"
-                         loading="lazy">
+                         loading="lazy"
+                         referrerpolicy="no-referrer">
                 </div>
                 <div class="col-md-8" data-aos="fade-left">
                     <h2 class="mb-4" data-translate="aboutMe">Sobre Mim</h2>
@@ -94,7 +96,7 @@
                     <a href="CV JONATHAN HENRIQUE - T.i.pdf" download class="btn btn-primary mt-3" id="cv-download" data-translate="downloadCV">
                         <i class="fas fa-download me-2"></i><span>Baixar Currículo</span>
                     </a>
-                    <a href="https://github.com/jhgaldino" target="_blank" class="btn btn-primary mt-3">
+                    <a href="https://github.com/jhgaldino" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="btn btn-primary mt-3">
                         <i class="fab fa-github me-2"></i>GitHub
                     </a>
                 </div>
@@ -105,7 +107,7 @@
     <section id="habilidades" class="section-padding">
         <div class="container text-center">
             <h2 class="mb-5" data-aos="fade-up" data-translate="skills">Habilidades</h2>
-            <div class="row text-center" data-aos="fade-up" data-aos-delay="200"></div>
+            <div class="row text-center" data-aos="fade-up" data-aos-delay="200">
                 <div class="col">
                     <i class="fas fa-code skill-icon fa-3x"></i>
                     <p>C#</p>
@@ -162,7 +164,7 @@
                         <div class="card-body">
                             <h5 class="card-title" data-translate="projectXPTOTitle">Restaurante XPTO</h5>
                             <p class="card-text" data-translate="projectXPTODesc">Sistema de Gerenciamento de Pedidos de Restaurante. Com validação de pedidos e controle de horário de refeições. Com API em .NET e Frontend em Angular.</p>
-                            <a href="https://github.com/jhgaldino/Xpto" class="btn btn-primary" target="_blank" data-translate="projectButton">Ver Projeto</a>
+                            <a href="https://github.com/jhgaldino/Xpto" class="btn btn-primary" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" data-translate="projectButton">Ver Projeto</a>
                         </div>
                     </div>
                 </div>
@@ -171,7 +173,7 @@
                         <div class="card-body">
                             <h5 class="card-title" data-translate="projectAPITitle">API de Usuários</h5>
                             <p class="card-text" data-translate="projectAPIDesc">API REST desenvolvida com ASP.NET Core para gerenciamento de usuários, incluindo autenticação e autorização.</p>
-                            <a href="https://github.com/jhgaldino/UsuariosAPI-ViceriSeidor" class="btn btn-primary" target="_blank" data-translate="projectButton">Ver Projeto</a>
+                            <a href="https://github.com/jhgaldino/UsuariosAPI-ViceriSeidor" class="btn btn-primary" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" data-translate="projectButton">Ver Projeto</a>
                         </div>
                     </div>
                 </div>
@@ -180,7 +182,7 @@
                         <div class="card-body">
                             <h5 class="card-title" data-translate="projectMicroblogTitle">Microblog Flask</h5>
                             <p class="card-text" data-translate="projectMicroblogDesc">Microblog desenvolvido com Flask, um framework de Python. Com autenticação de usuários e posts.</p>
-                            <a href="https://github.com/jhgaldino/Microblog-Flask" class="btn btn-primary" target="_blank" data-translate="projectButton">Ver Projeto</a>
+                            <a href="https://github.com/jhgaldino/Microblog-Flask" class="btn btn-primary" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" data-translate="projectButton">Ver Projeto</a>
                         </div>
                     </div>
                 </div>
@@ -189,7 +191,7 @@
                         <div class="card-body">
                             <h5 class="card-title" data-translate="projectNeuralTitle">Redes Neurais</h5>
                             <p class="card-text" data-translate="projectNeuralDesc">Implementação de Redes Neurais com Python, Pandas e Pytorch para previsão de resultados de partidas de futebol.</p>
-                            <a href="https://github.com/jhgaldino/Neural-Networks" class="btn btn-primary" target="_blank" data-translate="projectButton">Ver Projeto</a>
+                            <a href="https://github.com/jhgaldino/Neural-Networks" class="btn btn-primary" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" data-translate="projectButton">Ver Projeto</a>
                         </div>
                     </div>
                 </div>
@@ -198,7 +200,7 @@
                         <div class="card-body">
                             <h5 class="card-title" data-translate="projectBotTitle">Bot de Integração Discord-Telegram</h5>
                             <p class="card-text" data-translate="projectBotDesc">Bot desenvolvido com Python para integração entre os aplicativos Discord e Telegram.</p>
-                            <a href="https://github.com/jhgaldino/discord_telegram_bot" class="btn btn-primary" target="_blank" data-translate="projectButton">Ver Projeto</a>
+                            <a href="https://github.com/jhgaldino/discord_telegram_bot" class="btn btn-primary" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" data-translate="projectButton">Ver Projeto</a>
                         </div>
                     </div>
                 </div>
@@ -207,7 +209,7 @@
                         <div class="card-body">
                             <h5 class="card-title" data-translate="projectWebScrapTitle">WebScrapping com Python</h5>
                             <p class="card-text" data-translate="projectWebScrapDesc">WebScrapping de dados de um site de saúde com Python</p>
-                            <a href="https://github.com/jhgaldino/WebScrapping" class="btn btn-primary" target="_blank" data-translate="projectButton">Ver Projeto</a>
+                            <a href="https://github.com/jhgaldino/WebScrapping" class="btn btn-primary" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" data-translate="projectButton">Ver Projeto</a>
                         </div>
                     </div>
                 </div>
@@ -231,7 +233,7 @@
                                     <h6 class="card-subtitle text-muted" data-translate="job1Company">Qintess · Tempo integral</h6>
                                 </div>
                             </div>
-                            <p class="text-muted mb-2"><i class="fas fa-calendar-alt me-2"></i><span data-translate="job1Period">Fev 2025 - Presente</span></p>
+                            <p class="text-muted mb-2"><i class="fas fa-calendar-alt me-2"></i><span data-translate="job1Period">Fev 2025 - Jan 2026</span></p>
                             <p class="text-muted mb-2"><i class="fas fa-map-marker-alt me-2"></i><span data-translate="job1Location">Brasília, DF - Remoto</span></p>
                             <p class="card-text" data-translate="job1Desc">Atuação no time do Instituto Nacional de Colonização e Reforma Agrária (Incra). Desenvolvimento, manutenção e aprimoramento de sistemas legado e banco de dados usando .NET, ASP Clássico, SQL Server, Oracle DB, Git e GitLab. CI/CD e integração contínua.</p>
                         </div>
@@ -320,16 +322,16 @@
             <p class="lead mb-4" data-aos="fade-up" data-aos-delay="100" data-translate="contactText">Entre em contato comigo através das redes sociais abaixo</p>
             
             <div class="social-links" data-aos="fade-up" data-aos-delay="200">
-                <a href="https://wa.me/5511941069442" target="_blank" class="social-icon" aria-label="Entrar em contato pelo WhatsApp">
+                <a href="https://wa.me/5511941069442" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="social-icon" aria-label="Entrar em contato pelo WhatsApp">
                     <i class="fab fa-whatsapp fa-2x" aria-hidden="true"></i>
                 </a>
                 <a href="mailto:contato.jhgs@gmail.com" class="social-icon" aria-label="Enviar e-mail para Jonathan">
                     <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/jhgaldino" target="_blank" class="social-icon" aria-label="Perfil do LinkedIn de Jonathan Galdino">
+                <a href="https://www.linkedin.com/in/jhgaldino" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="social-icon" aria-label="Perfil do LinkedIn de Jonathan Galdino">
                     <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
                 </a>
-                <a href="https://www.instagram.com/poliekos" target="_blank" class="social-icon" aria-label="Perfil do Instagram de Jonathan">
+                <a href="https://www.instagram.com/poliekos" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="social-icon" aria-label="Perfil do Instagram de Jonathan">
                     <i class="fab fa-instagram fa-2x" aria-hidden="true"></i>
                 </a>
             </div>

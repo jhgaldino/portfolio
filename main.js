@@ -34,7 +34,7 @@ const translations = {
         // Experience
         job1Title: 'Analista Desenvolvedor I',
         job1Company: 'Qintess · Tempo integral',
-        job1Period: 'Fev 2025 - Presente',
+        job1Period: 'Fev 2025 - Jan 2026',
         job1Location: 'Brasília, DF - Remoto',
         job1Desc: 'Atuação no time do Instituto Nacional de Colonização e Reforma Agrária (Incra). Desenvolvimento, manutenção e aprimoramento de sistemas legado e banco de dados usando .NET, ASP Clássico, SQL Server, Oracle DB, Git e GitLab. CI/CD e integração contínua.',
         job2Title: 'Desenvolvedor Back End .NET',
@@ -79,7 +79,7 @@ const translations = {
         // Experience
         job1Title: 'Developer Analyst I',
         job1Company: 'Qintess · Full-time',
-        job1Period: 'Feb 2025 - Present',
+        job1Period: 'Feb 2025 - Jan 2026',
         job1Location: 'Brasília, DF - Remote',
         job1Desc: 'Working with the National Institute of Colonization and Agrarian Reform (Incra) team. Development, maintenance and improvement of legacy systems and databases using .NET, Classic ASP, SQL Server, Oracle DB, Git and GitLab. CI/CD and continuous integration.',
         job2Title: 'Back End .NET Developer',
@@ -172,11 +172,11 @@ class LanguageManager {
             if (!button.hasAttribute('data-translate')) {
                 const icon = button.querySelector('i');
                 const text = "GitHub"; // O texto é fixo, não precisa de tradução neste caso específico
-                button.innerHTML = ''; 
+                button.textContent = '';
                 if (icon) {
                     button.appendChild(icon);
                 }
-                button.innerHTML += ' ' + text;
+                button.appendChild(document.createTextNode(' ' + text));
             }
         });
     }
