@@ -1,5 +1,5 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Inter', 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -204,7 +204,7 @@ footer p {
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
-social-icon:hover {
+.social-icon:hover {
     transform: translateY(-3px);
     color: var(--text-secondary);
 }
@@ -220,7 +220,7 @@ social-icon:hover {
 }
 
 #educacao .fa-2x {
-    color: #007bff;
+    color: var(--accent);
 }
 
 .education-icon {
@@ -236,16 +236,16 @@ social-icon:hover {
 
 .btn-primary {
     transition: all 0.3s ease;
-    background-color: #0d6efd;
-    border-color: #0d6efd;
+    background-color: var(--accent);
+    border-color: var(--accent);
     color: #ffffff;
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 2px 10px rgba(0,123,255,0.2);
-    background-color: #0b5ed7;
-    border-color: #0a58ca;
+    box-shadow: 0 4px 15px var(--accent-shadow);
+    background-color: var(--accent-hover);
+    border-color: var(--accent-hover);
 }
 
 .card {
@@ -291,6 +291,25 @@ social-icon:hover {
     .section-padding {
         padding: 40px 0;
     }
+}
+
+/* ==============================
+   Root variables & accent color
+   ============================== */
+:root {
+    --accent: #6366f1;
+    --accent-hover: #4f46e5;
+    --accent-shadow: rgba(99, 102, 241, 0.25);
+    /* Default (light) theme fallback — overridden by [data-theme] below */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --text-primary: #212529;
+    --text-secondary: #6c757d;
+    --card-bg: #ffffff;
+    --border-color: #dee2e6;
+    --nav-text: #212529;
+    --footer-bg: #f1f3f5;
+    --footer-text: #212529;
 }
 
 /* Theme Toggle Styles */
@@ -719,7 +738,7 @@ input:checked + .slider:before {
 }
 
 .timeline-item .card {
-    border-left: 4px solid #0d6efd;
+    border-left: 4px solid var(--accent);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -729,7 +748,7 @@ input:checked + .slider:before {
 }
 
 .timeline-item .text-primary {
-    color: #0d6efd !important;
+    color: var(--accent) !important;
 }
 
 /* Contact Form Styles */
@@ -741,9 +760,9 @@ input:checked + .slider:before {
 
 .contact-form .form-control:focus {
     background-color: var(--bg-secondary);
-    border-color: #0d6efd;
+    border-color: var(--accent);
     color: var(--text-primary);
-    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+    box-shadow: 0 0 0 0.2rem var(--accent-shadow);
 }
 
 .contact-form .form-label {
@@ -756,10 +775,166 @@ input:checked + .slider:before {
 }
 
 .contact-info i {
-    color: #0d6efd;
+    color: var(--accent);
     width: 25px;
 }
 
 #contato .social-links {
     justify-content: center;
+}
+
+/* ==============================
+   Hero enhancements
+   ============================== */
+.hero-greeting {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.hero-role {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    min-height: 2.5rem;
+    margin-bottom: 0;
+}
+
+.typed-cursor {
+    display: inline-block;
+    animation: cursor-blink 0.75s step-end infinite;
+    color: var(--accent);
+    font-weight: 300;
+    margin-left: 2px;
+}
+
+@keyframes cursor-blink {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.hero-cta {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.btn-accent {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.btn-accent:hover {
+    background-color: var(--accent-hover);
+    border-color: var(--accent-hover);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px var(--accent-shadow);
+}
+
+@media (max-width: 768px) {
+    .hero-role {
+        font-size: 1.2rem;
+    }
+    .hero-cta {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* ==============================
+   Skills grid
+   ============================== */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-category {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-top: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.skill-category-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    margin-bottom: 1.25rem;
+}
+
+.skill-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    min-width: 54px;
+    cursor: default;
+}
+
+.skill-item i {
+    font-size: 2rem;
+    transition: transform 0.25s ease;
+}
+
+.skill-item span {
+    font-size: 0.72rem;
+    color: var(--text-secondary);
+    text-align: center;
+    line-height: 1.2;
+}
+
+.skill-item:hover i {
+    transform: scale(1.2);
+}
+
+.devicon-flask-original {
+    color: var(--text-primary);
+}
+
+/* ==============================
+   Project card improvements
+   ============================== */
+.project-card {
+    border-top: 3px solid var(--accent) !important;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin: 0.75rem 0 1rem;
+}
+
+.tech-tag {
+    font-size: 0.68rem;
+    font-weight: 500;
+    padding: 0.18rem 0.55rem;
+    border-radius: 20px;
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--accent);
+    border: 1px solid rgba(99, 102, 241, 0.25);
+    white-space: nowrap;
+}
+
+[data-theme="dark"] .tech-tag {
+    background: rgba(99, 102, 241, 0.2);
+    border-color: rgba(99, 102, 241, 0.4);
 }

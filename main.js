@@ -43,7 +43,17 @@ const translations = {
         job2Location: 'Jundiaí, SP - Híbrido',
         job2Desc: 'Desenvolvimento e manutenção de sistemas para o setor de seguros, utilizando .NET, C#, ASP Clássico, Oracle DB, SQL Server, Angular, Java e APIs SOAP. Atuação em projetos colaborativos com equipes multidisciplinares, empregando Azure DevOps, Bitbucket e Git, além de metodologias ágeis (Scrum).',
         // Contact Form
-        contactText: 'Entre em contato comigo através das redes sociais abaixo'
+        contactText: 'Entre em contato comigo através das redes sociais abaixo',
+        // Hero
+        heroGreeting: 'Olá, eu sou',
+        heroCtaPrimary: 'Conheça meu trabalho',
+        heroCtaSecondary: 'Entre em contato',
+        heroTyped: ['Desenvolvedor Back-End', 'Especialista em .NET', 'Analista de Sistemas'],
+        // Skill categories
+        skillCatBackend: 'Back-End',
+        skillCatDatabase: 'Banco de Dados',
+        skillCatCloud: 'Cloud & DevOps',
+        skillCatFrontend: 'Frontend'
     },
     en: {
         title: 'Jonathan Galdino | Portfolio',
@@ -88,9 +98,61 @@ const translations = {
         job2Location: 'Jundiaí, SP - Hybrid',
         job2Desc: 'Development and maintenance of systems for the insurance sector, using .NET, C#, Classic ASP, Oracle DB, SQL Server, Angular, Java and SOAP APIs. Working on collaborative projects with multidisciplinary teams, using Azure DevOps, Bitbucket and Git, as well as agile methodologies (Scrum).',
         // Contact
-        contactText: 'Get in touch with me through the social networks below'
+        contactText: 'Get in touch with me through the social networks below',
+        // Hero
+        heroGreeting: 'Hello, I am',
+        heroCtaPrimary: 'See my work',
+        heroCtaSecondary: 'Get in touch',
+        heroTyped: ['Back-End Developer', '.NET Specialist', 'Systems Analyst'],
+        // Skill categories
+        skillCatBackend: 'Back-End',
+        skillCatDatabase: 'Database',
+        skillCatCloud: 'Cloud & DevOps',
+        skillCatFrontend: 'Frontend'
     }
 };
+
+// Typed text animation
+class TypedText {
+    constructor(elementId, strings, speed = 80, deleteSpeed = 40, pauseTime = 2000) {
+        this.el = document.getElementById(elementId);
+        this.strings = strings;
+        this.speed = speed;
+        this.deleteSpeed = deleteSpeed;
+        this.pauseTime = pauseTime;
+        this.currentIndex = 0;
+        this.currentText = '';
+        this.isDeleting = false;
+        if (this.el) this._tick();
+    }
+
+    updateStrings(strings) {
+        this.strings = strings;
+    }
+
+    _tick() {
+        const current = this.strings[this.currentIndex];
+        if (this.isDeleting) {
+            this.currentText = current.substring(0, this.currentText.length - 1);
+        } else {
+            this.currentText = current.substring(0, this.currentText.length + 1);
+        }
+        this.el.textContent = this.currentText;
+
+        let delay = this.isDeleting ? this.deleteSpeed : this.speed;
+        if (!this.isDeleting && this.currentText === current) {
+            delay = this.pauseTime;
+            this.isDeleting = true;
+        } else if (this.isDeleting && this.currentText === '') {
+            this.isDeleting = false;
+            this.currentIndex = (this.currentIndex + 1) % this.strings.length;
+            delay = 400;
+        }
+        setTimeout(() => this._tick(), delay);
+    }
+}
+
+let typedTextInstance = null;
 
 // Theme Management
 class ThemeManager {
@@ -152,6 +214,11 @@ class LanguageManager {
                 }
             }
         });
+
+        // Update typed text strings
+        if (typedTextInstance && translations[lang].heroTyped) {
+            typedTextInstance.updateStrings(translations[lang].heroTyped);
+        }
 
         // Update CV download link
         const cvButton = document.getElementById('cv-download');
@@ -253,6 +320,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     new ThemeManager();
-    new LanguageManager();
+    const langManager = new LanguageManager();
     new BackToTopManager();
+    typedTextInstance = new TypedText('typed-text', translations['pt'].heroTyped);
 });

@@ -7,19 +7,28 @@
         <meta name="description" content="Portfólio de Jonathan Galdino - Desenvolvedor Back-End e Analista de Sistemas especializado em C#, Python, Java, .NET, Flask e AWS Cloud.">
         <meta name="keywords" content="desenvolvedor, back-end, programador, C#, Python, Java, .NET, Flask, AWS, Angular, SQL Server, Oracle, portfólio">
         <meta name="author" content="Jonathan Galdino">
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://unpkg.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com; img-src 'self' https://avatars.githubusercontent.com https://flagcdn.com data:; font-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; frame-ancestors 'self'">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://unpkg.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com https://fonts.googleapis.com; img-src 'self' https://avatars.githubusercontent.com https://flagcdn.com data:; font-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://fonts.gstatic.com; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; frame-ancestors 'self'">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/devicon@2.16.0/devicon.min.css" rel="stylesheet">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
     </head>
 <body>
     <header class="hero-header">
         <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1 data-aos="fade-down" data-aos-duration="1000">Jonathan Galdino</h1>
-            <p data-translate="role" data-aos="fade-up" data-aos-delay="300">Desenvolvedor Back-End e Analista de Sistemas</p>
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="900">
+            <p class="hero-greeting" data-translate="heroGreeting">Olá, eu sou</p>
+            <h1>Jonathan Galdino</h1>
+            <p class="hero-role">
+                <span id="typed-text"></span><span class="typed-cursor">|</span>
+            </p>
+            <div class="hero-cta">
+                <a href="#sobre" class="btn btn-accent btn-lg" data-translate="heroCtaPrimary">Conheça meu trabalho</a>
+                <a href="#contato" class="btn btn-outline-light btn-lg" data-translate="heroCtaSecondary">Entre em contato</a>
+            </div>
         </div>
     </header>
 
@@ -105,48 +114,39 @@
     </section>
 
     <section id="habilidades" class="section-padding">
-        <div class="container text-center">
-            <h2 class="mb-5" data-aos="fade-up" data-translate="skills">Habilidades</h2>
-            <div class="row text-center" data-aos="fade-up" data-aos-delay="200">
-                <div class="col">
-                    <i class="fas fa-code skill-icon fa-3x"></i>
-                    <p>C#</p>
+        <div class="container">
+            <h2 class="text-center mb-5" data-aos="fade-up" data-translate="skills">Habilidades</h2>
+            <div class="skills-grid" data-aos="fade-up" data-aos-delay="200">
+                <div class="skill-category">
+                    <h5 class="skill-category-title" data-translate="skillCatBackend">Back-End</h5>
+                    <div class="skill-items">
+                        <div class="skill-item"><i class="devicon-csharp-plain colored"></i><span>C#</span></div>
+                        <div class="skill-item"><i class="devicon-dotnetcore-plain colored"></i><span>.NET</span></div>
+                        <div class="skill-item"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+                        <div class="skill-item"><i class="devicon-java-plain colored"></i><span>Java</span></div>
+                        <div class="skill-item"><i class="devicon-flask-original"></i><span>Flask</span></div>
+                    </div>
                 </div>
-                <div class="col">
-                    <i class="fab fa-python skill-icon fa-3x"></i>
-                    <p>Python</p>
+                <div class="skill-category">
+                    <h5 class="skill-category-title" data-translate="skillCatDatabase">Banco de Dados</h5>
+                    <div class="skill-items">
+                        <div class="skill-item"><i class="devicon-microsoftsqlserver-plain colored"></i><span>SQL Server</span></div>
+                        <div class="skill-item"><i class="devicon-oracle-original colored"></i><span>Oracle DB</span></div>
+                    </div>
                 </div>
-                <div class="col">
-                    <i class="fab fa-java skill-icon fa-3x"></i>
-                    <p>Java</p>
+                <div class="skill-category">
+                    <h5 class="skill-category-title" data-translate="skillCatCloud">Cloud & DevOps</h5>
+                    <div class="skill-items">
+                        <div class="skill-item"><i class="devicon-amazonwebservices-plain-wordmark colored"></i><span>AWS</span></div>
+                        <div class="skill-item"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+                    </div>
                 </div>
-                <div class="col">
-                    <i class="fas fa-database skill-icon fa-3x"></i>
-                    <p>Oracle DB</p>
-                </div>
-                <div class="col">
-                    <i class="fas fa-database skill-icon fa-3x"></i>
-                    <p>Microsoft SQL Server</p>
-                </div>
-                <div class="col">
-                    <i class="fas fa-cloud skill-icon fa-3x"></i>
-                    <p>AWS Cloud</p>
-                </div>
-                <div class="col">
-                    <i class="fas fa-project-diagram skill-icon fa-3x"></i>
-                    <p>Flask</p>
-                </div>
-                <div class="col">
-                    <i class="fab fa-bootstrap skill-icon fa-3x"></i>
-                    <p>Bootstrap</p>
-                </div>
-                <div class="col">
-                    <i class="fab fa-angular skill-icon fa-3x"></i>
-                    <p>Angular</p>
-                </div>
-                <div class="col">
-                    <i class="fab fa-git skill-icon fa-3x"></i>
-                    <p>Git</p>
+                <div class="skill-category">
+                    <h5 class="skill-category-title" data-translate="skillCatFrontend">Frontend</h5>
+                    <div class="skill-items">
+                        <div class="skill-item"><i class="devicon-angularjs-plain colored"></i><span>Angular</span></div>
+                        <div class="skill-item"><i class="devicon-bootstrap-plain colored"></i><span>Bootstrap</span></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -164,6 +164,7 @@
                         <div class="card-body">
                             <h5 class="card-title" data-translate="projectXPTOTitle">Restaurante XPTO</h5>
                             <p class="card-text" data-translate="projectXPTODesc">Sistema de Gerenciamento de Pedidos de Restaurante. Com validação de pedidos e controle de horário de refeições. Com API em .NET e Frontend em Angular.</p>
+                            <div class="tech-tags"><span class="tech-tag">.NET</span><span class="tech-tag">C#</span><span class="tech-tag">Angular</span></div>
                             <a href="https://github.com/jhgaldino/Xpto" class="btn btn-primary" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" data-translate="projectButton">Ver Projeto</a>
                         </div>
                     </div>
@@ -173,6 +174,7 @@
                         <div class="card-body">
                             <h5 class="card-title" data-translate="projectAPITitle">API de Usuários</h5>
                             <p class="card-text" data-translate="projectAPIDesc">API REST desenvolvida com ASP.NET Core para gerenciamento de usuários, incluindo autenticação e autorização.</p>
+                            <div class="tech-tags"><span class="tech-tag">ASP.NET Core</span><span class="tech-tag">C#</span><span class="tech-tag">REST</span></div>
                             <a href="https://github.com/jhgaldino/UsuariosAPI-ViceriSeidor" class="btn btn-primary" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" data-translate="projectButton">Ver Projeto</a>
                         </div>
                     </div>
@@ -182,6 +184,7 @@
                         <div class="card-body">
                             <h5 class="card-title" data-translate="projectMicroblogTitle">Microblog Flask</h5>
                             <p class="card-text" data-translate="projectMicroblogDesc">Microblog desenvolvido com Flask, um framework de Python. Com autenticação de usuários e posts.</p>
+                            <div class="tech-tags"><span class="tech-tag">Python</span><span class="tech-tag">Flask</span><span class="tech-tag">SQLite</span></div>
                             <a href="https://github.com/jhgaldino/Microblog-Flask" class="btn btn-primary" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" data-translate="projectButton">Ver Projeto</a>
                         </div>
                     </div>
@@ -191,6 +194,7 @@
                         <div class="card-body">
                             <h5 class="card-title" data-translate="projectNeuralTitle">Redes Neurais</h5>
                             <p class="card-text" data-translate="projectNeuralDesc">Implementação de Redes Neurais com Python, Pandas e Pytorch para previsão de resultados de partidas de futebol.</p>
+                            <div class="tech-tags"><span class="tech-tag">Python</span><span class="tech-tag">PyTorch</span><span class="tech-tag">Pandas</span></div>
                             <a href="https://github.com/jhgaldino/Neural-Networks" class="btn btn-primary" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" data-translate="projectButton">Ver Projeto</a>
                         </div>
                     </div>
@@ -200,6 +204,7 @@
                         <div class="card-body">
                             <h5 class="card-title" data-translate="projectBotTitle">Bot de Integração Discord-Telegram</h5>
                             <p class="card-text" data-translate="projectBotDesc">Bot desenvolvido com Python para integração entre os aplicativos Discord e Telegram.</p>
+                            <div class="tech-tags"><span class="tech-tag">Python</span><span class="tech-tag">Discord.py</span></div>
                             <a href="https://github.com/jhgaldino/discord_telegram_bot" class="btn btn-primary" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" data-translate="projectButton">Ver Projeto</a>
                         </div>
                     </div>
@@ -209,6 +214,7 @@
                         <div class="card-body">
                             <h5 class="card-title" data-translate="projectWebScrapTitle">WebScrapping com Python</h5>
                             <p class="card-text" data-translate="projectWebScrapDesc">WebScrapping de dados de um site de saúde com Python</p>
+                            <div class="tech-tags"><span class="tech-tag">Python</span><span class="tech-tag">BeautifulSoup</span></div>
                             <a href="https://github.com/jhgaldino/WebScrapping" class="btn btn-primary" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" data-translate="projectButton">Ver Projeto</a>
                         </div>
                     </div>
