@@ -30,7 +30,7 @@ const translations = {
         projectNeuralTitle: 'Redes Neurais',
         projectNeuralDesc: 'Implementação de redes neurais com Python, Pandas e PyTorch para previsão de resultados de partidas de futebol.',
         projectBotTitle: 'Bot de Integração Discord-Telegram',
-        projectBotDesc: 'Bot desenvolvido com Python para integração entre os aplicativos Discord e Telegram.',
+        projectBotDesc: 'Bot em Python para integração entre Discord e Telegram, com autenticação via QR Code/2FA, gerenciamento de canais e execução como serviço em uma instância AWS EC2.',
         projectWebScrapTitle: 'Web Scraping com Python',
         projectWebScrapDesc: 'Extração e organização de dados de um site de saúde com Python e BeautifulSoup.',
         // Experience
@@ -97,7 +97,7 @@ const translations = {
         projectNeuralTitle: 'Neural Networks',
         projectNeuralDesc: 'Implementation of neural networks with Python, Pandas, and PyTorch to predict football match results.',
         projectBotTitle: 'Discord-Telegram Integration Bot',
-        projectBotDesc: 'Bot developed with Python for integration between Discord and Telegram applications.',
+        projectBotDesc: 'Python bot integrating Discord and Telegram, with QR code/2FA authentication, channel management, and service deployment on an AWS EC2 instance.',
         projectWebScrapTitle: 'WebScraping with Python',
         projectWebScrapDesc: 'Extraction and organization of health website data using Python and BeautifulSoup.',
         // Experience
