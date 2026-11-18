@@ -1,409 +1,604 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Jonathan Henrique | Portfólio</title>
-        <meta name="description" content="Portfólio de Jonathan Galdino, desenvolvedor back-end .NET e analista de sistemas com experiência em C#, .NET 8, APIs REST, Angular e SQL Server.">
-        <meta name="keywords" content="desenvolvedor back-end, analista de sistemas, C#, .NET 8, ASP.NET Core, APIs REST, Angular, SQL Server, PostgreSQL, portfólio">
-        <meta name="author" content="Jonathan Galdino">
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://unpkg.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com https://fonts.googleapis.com; img-src 'self' https://avatars.githubusercontent.com https://flagcdn.com data:; font-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://fonts.gstatic.com; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; frame-ancestors 'self'">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/devicon@2.16.0/devicon.min.css" rel="stylesheet">
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <link rel="stylesheet" href="styles.css">
-    </head>
-<body>
-    <header class="hero-header">
-        <div class="hero-overlay"></div>
-        <div class="hero-content" data-aos="fade-up" data-aos-duration="900">
-            <p class="hero-greeting" data-translate="heroGreeting">Olá, eu sou</p>
-            <h1>Jonathan Galdino</h1>
-            <p class="hero-role">
-                <span id="typed-text"></span><span class="typed-cursor">|</span>
-            </p>
-            <div class="hero-cta">
-                <a href="#sobre" class="btn btn-accent btn-lg" data-translate="heroCtaPrimary">Conheça meu trabalho</a>
-                <a href="#contato" class="btn btn-outline-light btn-lg" data-translate="heroCtaSecondary">Entre em contato</a>
+<html lang="pt-br" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonathan Galdino | Desenvolvedor Back-End .NET &amp; Sistemas</title>
+    <meta name="description" content="Portfólio de Jonathan Galdino, desenvolvedor back-end .NET e analista de sistemas com experiência em C#, .NET 8/9, APIs REST, workers, SQL Server, PostgreSQL e Angular 17/18.">
+    <meta name="keywords" content="desenvolvedor back-end, analista de sistemas, C#, .NET 8, .NET 9, ASP.NET Core, APIs REST, Angular, SQL Server, PostgreSQL, workers, portfólio">
+    <meta name="author" content="Jonathan Henrique Galdino da Silva">
+    <meta property="og:title" content="Jonathan Galdino | Desenvolvedor Back-End .NET &amp; Sistemas">
+    <meta property="og:description" content="Back-end .NET, workers de alto volume (+100M áudios), SQL Server, PostgreSQL e Angular 17/18.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jhgaldino.github.io/portfolio/">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/21108827?s=400&amp;u=a4fb734211a612d0fa5287f53f7caf678251345f&amp;v=4">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; img-src 'self' https://avatars.githubusercontent.com data:; font-src 'self' https://cdn.jsdelivr.net https://fonts.gstatic.com; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; frame-ancestors 'self'">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.16.0/devicon.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#top" class="brand" aria-label="Jonathan Galdino">
+                <span class="brand-user">jhgaldino</span><span class="brand-sep">:</span><span class="brand-path">~/portfolio</span>
+            </a>
+
+            <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+                <a href="#sobre" class="nav-link"><span class="nav-idx">01.</span><span data-translate="about">sobre</span></a>
+                <a href="#experiencia" class="nav-link"><span class="nav-idx">02.</span><span data-translate="experience">experiência</span></a>
+                <a href="#projetos" class="nav-link"><span class="nav-idx">03.</span><span data-translate="projects">projetos</span></a>
+                <a href="#habilidades" class="nav-link"><span class="nav-idx">04.</span><span data-translate="skills">stack</span></a>
+                <a href="#educacao" class="nav-link"><span class="nav-idx">05.</span><span data-translate="education">formação</span></a>
+                <a href="#contato" class="nav-link"><span class="nav-idx">06.</span><span data-translate="contact">contato</span></a>
+            </nav>
+
+            <div class="header-actions">
+                <div class="lang-switch" role="group" aria-label="Idioma">
+                    <button type="button" class="lang-btn active" data-lang="pt" aria-pressed="true">PT</button>
+                    <span class="lang-divider" aria-hidden="true">/</span>
+                    <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+                </div>
+
+                <button type="button" id="theme-toggle" class="theme-btn" aria-label="Alternar tema claro/escuro">
+                    <i class="ph ph-sun" id="theme-icon" aria-hidden="true"></i>
+                    <span id="theme-label">LIGHT</span>
+                </button>
+
+                <button type="button" id="mobile-menu-toggle" class="mobile-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menu">
+                    <i class="ph ph-list" aria-hidden="true"></i>
+                </button>
             </div>
         </div>
     </header>
 
-    <!-- Update navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">Jonathan Galdino</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#sobre" data-translate="about">Sobre</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#habilidades" data-translate="skills">Habilidades</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projetos" data-translate="projects">Projetos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#experiencia" data-translate="experience">Experiência</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#educacao" data-translate="education">Educação</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contato" data-translate="contact">Contato</a></li>
-                    <!-- Language Dropdown -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="https://flagcdn.com/24x18/br.png" alt="Português" class="flag-icon me-1" id="selected-language-flag" referrerpolicy="no-referrer">
-                            <span id="selected-language">Português</span>
+    <main>
+        <!-- [01] HERO & SOBRE -->
+        <section id="sobre" class="spec-section hero-section">
+            <div class="container hero-grid">
+                <div class="hero-main">
+                    <div class="status-line">
+                        <span class="status-dot" aria-hidden="true"></span>
+                        <span data-translate="heroStatus">BACK-END .NET &amp; SISTEMAS // JUNDIAÍ, SP · REMOTO</span>
+                    </div>
+
+                    <h1>Jonathan Henrique Galdino</h1>
+
+                    <p class="terminal-role">
+                        <span class="prompt">&gt; role:</span>
+                        <span id="typed-text"></span><span class="typed-cursor" aria-hidden="true">_</span>
+                    </p>
+
+                    <p class="hero-summary" data-translate="aboutText">
+                        Desenvolvedor back-end .NET com experiência em C#, .NET 8 e 9, APIs REST e bancos relacionais. Atuo na Atento na evolução e otimização de um portal de áudio que processa mais de 100 milhões de registros com .NET 8, workers assíncronos, SQL Server e Angular 17. Tenho experiência prática na modernização de sistemas governamentais (INCRA), plataformas de seguros e softwares industriais SCADA.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="CV-JONATHAN-HENRIQUE--FINAL.pdf" download class="btn-spec btn-amber" id="cv-download">
+                            <i class="ph ph-download-simple" aria-hidden="true"></i>
+                            <span data-translate="downloadCV">Baixar Currículo (PDF)</span>
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
-                            <li>
-                                <a class="dropdown-item d-flex align-items-center" href="#" data-lang="pt">
-                                    <img src="https://flagcdn.com/24x18/br.png" alt="Português" class="flag-icon me-2" referrerpolicy="no-referrer">
-                                    Português
+                        <a href="#projetos" class="btn-spec">
+                            <span data-translate="heroCtaPrimary">Ver arquitetura de projetos</span>
+                            <i class="ph ph-arrow-down-right" aria-hidden="true"></i>
+                        </a>
+                        <div class="hero-links">
+                            <a href="https://github.com/jhgaldino" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="inline-ext">
+                                <i class="ph ph-github-logo" aria-hidden="true"></i>
+                                <span>GitHub</span>
+                                <i class="ph ph-arrow-up-right ext-arrow" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/jhgaldino" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="inline-ext">
+                                <i class="ph ph-linkedin-logo" aria-hidden="true"></i>
+                                <span>LinkedIn</span>
+                                <i class="ph ph-arrow-up-right ext-arrow" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="telemetry-panel" aria-label="Especificações técnicas">
+                    <div class="telemetry-head">
+                        <img
+                            src="https://avatars.githubusercontent.com/u/21108827?s=400&amp;u=a4fb734211a612d0fa5287f53f7caf678251345f&amp;v=4"
+                            alt="Foto de perfil de Jonathan Galdino"
+                            class="profile-avatar"
+                            width="56"
+                            height="56"
+                            referrerpolicy="no-referrer">
+                        <div class="telemetry-id">
+                            <span class="telemetry-handle">@jhgaldino</span>
+                            <span class="telemetry-degree" data-translate="profileDegree">B.Sc. Ciência da Computação · IFTM</span>
+                        </div>
+                    </div>
+
+                    <dl class="telemetry-list">
+                        <div class="telemetry-row">
+                            <dt data-translate="telVolLabel">VOLUME EM PRODUÇÃO</dt>
+                            <dd class="val-highlight" data-translate="telVolVal">+100 milhões de áudios (workers + SQL Server)</dd>
+                        </div>
+                        <div class="telemetry-row">
+                            <dt data-translate="telStackLabel">ECOSSISTEMA PRINCIPAL</dt>
+                            <dd>C# · .NET 8/9 · ASP.NET Core · EF Core</dd>
+                        </div>
+                        <div class="telemetry-row">
+                            <dt data-translate="telDbLabel">BANCOS DE DADOS</dt>
+                            <dd>SQL Server · PostgreSQL · Oracle · Redis</dd>
+                        </div>
+                        <div class="telemetry-row">
+                            <dt data-translate="telCloudLabel">CREDENCIAL CLOUD</dt>
+                            <dd>AWS Certified Cloud Practitioner</dd>
+                        </div>
+                    </dl>
+                </aside>
+            </div>
+        </section>
+
+        <!-- [02] EXPERIÊNCIA PROFISSIONAL -->
+        <section id="experiencia" class="spec-section">
+            <div class="container section-layout">
+                <div class="section-rail">
+                    <span class="section-tag" data-translate="railExpTag">[02] // PRODUÇÃO</span>
+                    <h2 data-translate="experienceTitle">Experiência Profissional</h2>
+                    <p class="rail-note" data-translate="railExpNote">Atuação contínua desde 2022 em sistemas corporativos, governo, seguros e automação industrial.</p>
+                </div>
+
+                <div class="section-body">
+                    <div class="exp-log">
+                        <!-- Atento -->
+                        <article class="exp-entry is-current">
+                            <div class="exp-meta">
+                                <span class="exp-period"><span class="live-dot" aria-hidden="true"></span><span data-translate="job1Period">Jun 2026 - Atual</span></span>
+                                <span class="exp-location" data-translate="job1Location">Remoto · São Caetano do Sul, SP</span>
+                            </div>
+                            <div class="exp-content">
+                                <header class="exp-header">
+                                    <h3 data-translate="job1Title">Desenvolvedor Full Stack Pleno</h3>
+                                    <span class="exp-company" data-translate="job1Company">Atento · Tempo integral</span>
+                                </header>
+                                <ul class="exp-bullets">
+                                    <li data-translate="job1Bullet1">Evolução de portal de áudio com API REST em .NET 8, front-end em Angular 17 e persistência em SQL Server.</li>
+                                    <li data-translate="job1Bullet2">Implementação de cliente e endpoints HCP para localizar e consumir áudios via links HCP, substituindo o fluxo anterior baseado em pastas NAS.</li>
+                                    <li data-translate="job1Bullet3">Adaptação de workers de extração, metadados e compactação em um fluxo superior a 100 milhões de áudios, apoiado por filas no SQL Server e leitura de XML.</li>
+                                    <li data-translate="job1Bullet4">Consultas de descoberta e listagem em três bancos de origem, análise de leituras com SET STATISTICS e criação de índices para reduzir o tempo de resposta.</li>
+                                </ul>
+                                <div class="spec-tags">
+                                    <span class="spec-tag">.NET 8</span>
+                                    <span class="spec-tag">C#</span>
+                                    <span class="spec-tag">Angular 17</span>
+                                    <span class="spec-tag">SQL Server</span>
+                                    <span class="spec-tag">Workers</span>
+                                    <span class="spec-tag">HCP</span>
+                                    <span class="spec-tag">XML</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Qintess -->
+                        <article class="exp-entry">
+                            <div class="exp-meta">
+                                <span class="exp-period" data-translate="job2Period">Fev 2025 - Jan 2026</span>
+                                <span class="exp-location" data-translate="job2Location">Remoto · Brasília, DF</span>
+                            </div>
+                            <div class="exp-content">
+                                <header class="exp-header">
+                                    <h3 data-translate="job2Title">Analista Desenvolvedor Júnior</h3>
+                                    <span class="exp-company" data-translate="job2Company">Qintess · Tempo integral</span>
+                                </header>
+                                <ul class="exp-bullets">
+                                    <li data-translate="job2Bullet1">Desenvolvimento, manutenção e modernização do sistema SIPRA do INCRA com .NET, ASP Clássico, SQL Server e PostgreSQL.</li>
+                                    <li data-translate="job2Bullet2">Criação de procedures, scripts e rotinas ETL para padronização, integridade e confiabilidade de dados cadastrais.</li>
+                                    <li data-translate="job2Bullet3">Migração de relatórios gerenciais de Crystal Reports para HTML e análise e correção de falhas com Git e GitLab.</li>
+                                </ul>
+                                <div class="spec-tags">
+                                    <span class="spec-tag">.NET</span>
+                                    <span class="spec-tag" data-translate="tagClassicAsp">ASP Clássico</span>
+                                    <span class="spec-tag">SQL Server</span>
+                                    <span class="spec-tag">PostgreSQL</span>
+                                    <span class="spec-tag">Procedures &amp; ETL</span>
+                                    <span class="spec-tag">GitLab</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Viceri SEIDOR -->
+                        <article class="exp-entry">
+                            <div class="exp-meta">
+                                <span class="exp-period" data-translate="job3Period">Jun 2024 - Dez 2024</span>
+                                <span class="exp-location" data-translate="job3Location">Jundiaí, SP · Híbrido</span>
+                            </div>
+                            <div class="exp-content">
+                                <header class="exp-header">
+                                    <h3 data-translate="job3Title">Desenvolvedor Back-end .NET Trainee</h3>
+                                    <span class="exp-company" data-translate="job3Company">Viceri SEIDOR · Trainee</span>
+                                </header>
+                                <ul class="exp-bullets">
+                                    <li data-translate="job3Bullet1">Desenvolvimento e sustentação de sistemas do setor de seguros com ASP.NET, C#, Angular, SQL Server, Oracle DB e APIs SOAP em ambiente Scrum.</li>
+                                    <li data-translate="job3Bullet2">Migração de banco SQL Server 2014 para 2022 com Data Migration Assistant e reestruturação de views, triggers e procedures.</li>
+                                    <li data-translate="job3Bullet3">Solução para padronizar nomes e extensões de arquivos que impediam a abertura de documentos no sistema.</li>
+                                </ul>
+                                <div class="spec-tags">
+                                    <span class="spec-tag">ASP.NET</span>
+                                    <span class="spec-tag">C#</span>
+                                    <span class="spec-tag">SQL Server 2022</span>
+                                    <span class="spec-tag">Oracle DB</span>
+                                    <span class="spec-tag" data-translate="tagSoapApis">APIs SOAP</span>
+                                    <span class="spec-tag">Angular</span>
+                                    <span class="spec-tag">Azure DevOps</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Tatsoft -->
+                        <article class="exp-entry">
+                            <div class="exp-meta">
+                                <span class="exp-period" data-translate="job4Period">Dez 2022 - Jan 2024</span>
+                                <span class="exp-location" data-translate="job4Location">Remoto</span>
+                            </div>
+                            <div class="exp-content">
+                                <header class="exp-header">
+                                    <h3 data-translate="job4Title">Desenvolvedor Júnior</h3>
+                                    <span class="exp-company" data-translate="job4Company">Tatsoft · Tempo integral</span>
+                                </header>
+                                <ul class="exp-bullets">
+                                    <li data-translate="job4Bullet1">Manutenção evolutiva e corretiva de software industrial SCADA com .NET Framework 4.6.2, C#, SQLite e SQL Server.</li>
+                                    <li data-translate="job4Bullet2">Testes de integrações industriais com protocolos Modbus, MQTT Sparkplug B, CTC e ControlLogix, com suporte técnico a clientes nacionais e internacionais.</li>
+                                    <li data-translate="job4Bullet3">Produção de vídeos e documentação técnica padronizada sobre Unified Namespace e arquitetura de integrações.</li>
+                                </ul>
+                                <div class="spec-tags">
+                                    <span class="spec-tag">.NET Framework 4.6.2</span>
+                                    <span class="spec-tag">C#</span>
+                                    <span class="spec-tag">SQL Server</span>
+                                    <span class="spec-tag">SQLite</span>
+                                    <span class="spec-tag">MQTT Sparkplug B</span>
+                                    <span class="spec-tag">Modbus</span>
+                                    <span class="spec-tag">SCADA</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Scope Systems -->
+                        <article class="exp-entry">
+                            <div class="exp-meta">
+                                <span class="exp-period" data-translate="job5Period">Mai 2022 - Ago 2022</span>
+                                <span class="exp-location" data-translate="job5Location">Jundiaí, SP</span>
+                            </div>
+                            <div class="exp-content">
+                                <header class="exp-header">
+                                    <h3 data-translate="job5Title">Estagiário de Desenvolvimento de Software</h3>
+                                    <span class="exp-company" data-translate="job5Company">Scope Systems · Estágio</span>
+                                </header>
+                                <ul class="exp-bullets">
+                                    <li data-translate="job5Bullet1">Análise de requisitos, implementação de funcionalidades, correção de defeitos e suporte técnico com C# e SQL Server.</li>
+                                </ul>
+                                <div class="spec-tags">
+                                    <span class="spec-tag">C#</span>
+                                    <span class="spec-tag">SQL Server</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- [03] PROJETOS SELECIONADOS -->
+        <section id="projetos" class="spec-section">
+            <div class="container section-layout">
+                <div class="section-rail">
+                    <span class="section-tag" data-translate="railProjTag">[03] // ENGENHARIA</span>
+                    <h2 data-translate="projectsTitle">Projetos Selecionados</h2>
+                    <p class="rail-note" data-translate="railProjNote">Arquitetura completa nos projetos principais e repositório de experimentos e utilitários logo abaixo.</p>
+                </div>
+
+                <div class="section-body">
+                    <div class="featured-projects">
+                        <!-- Projeto 1: Preveja -->
+                        <article class="featured-card featured-primary">
+                            <div class="project-top">
+                                <span class="project-kicker" data-translate="proj1Meta">ARQUITETURA EM DESTAQUE // 01</span>
+                                <a href="https://github.com/jhgaldino/Preveja" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="repo-link">
+                                    <span>jhgaldino/Preveja</span>
+                                    <i class="ph ph-arrow-up-right ext-arrow" aria-hidden="true"></i>
                                 </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item d-flex align-items-center" href="#" data-lang="en">
-                                    <img src="https://flagcdn.com/24x18/gb.png" alt="English" class="flag-icon me-2" referrerpolicy="no-referrer">
-                                    English
+                            </div>
+                            <h3 data-translate="projectPrevejaTitle">Preveja: Plataforma de Mercado de Previsões</h3>
+                            <p class="project-desc" data-translate="projectPrevejaDesc">Aplicação full stack em Clean Architecture para negociação e acompanhamento de mercados preditivos em tempo real, empacotada com Docker.</p>
+
+                            <div class="arch-breakdown">
+                                <div class="arch-col">
+                                    <span class="arch-label" data-translate="proj1Spec1Label">BACK-END &amp; PERSISTÊNCIA</span>
+                                    <p data-translate="proj1Spec1Desc">API REST em .NET 9 e ASP.NET Core, Entity Framework Core, PostgreSQL, Identity/JWT e cache com Redis.</p>
+                                </div>
+                                <div class="arch-col">
+                                    <span class="arch-label" data-translate="proj1Spec2Label">TEMPO REAL &amp; DEPLOY</span>
+                                    <p data-translate="proj1Spec2Desc">Atualizações via SignalR, PWA em Angular 18 com TypeScript, containerização Docker e deploy na Railway.</p>
+                                </div>
+                            </div>
+
+                            <div class="spec-tags">
+                                <span class="spec-tag">.NET 9</span>
+                                <span class="spec-tag">ASP.NET Core</span>
+                                <span class="spec-tag">Clean Architecture</span>
+                                <span class="spec-tag">Angular 18</span>
+                                <span class="spec-tag">PostgreSQL</span>
+                                <span class="spec-tag">Redis</span>
+                                <span class="spec-tag">SignalR</span>
+                                <span class="spec-tag">JWT</span>
+                                <span class="spec-tag">Docker</span>
+                            </div>
+                        </article>
+
+                        <!-- Projeto 2: Bot Discord-Telegram -->
+                        <article class="featured-card">
+                            <div class="project-top">
+                                <span class="project-kicker" data-translate="proj2Meta">AUTOMAÇÃO &amp; CLOUD // 02</span>
+                                <a href="https://github.com/jhgaldino/discord_telegram_bot" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="repo-link">
+                                    <span>jhgaldino/discord_telegram_bot</span>
+                                    <i class="ph ph-arrow-up-right ext-arrow" aria-hidden="true"></i>
                                 </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- Theme Toggle -->
-                    <li class="nav-item">
-                        <div class="theme-switch-wrapper">
-                            <div class="theme-icons">
-                                <i class="fas fa-sun"></i>
-                                <i class="fas fa-moon"></i>
                             </div>
-                            <label class="theme-switch">
-                                <input type="checkbox" id="theme-toggle">
-                                <span class="slider"></span>
-                            </label>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+                            <h3 data-translate="projectBotTitle">Bot de Integração Discord-Telegram</h3>
+                            <p class="project-desc" data-translate="projectBotDesc">Serviço em Python para ponte de mensagens entre Discord e Telegram, com autenticação via QR Code/2FA, gerenciamento de canais e execução contínua como serviço em instância AWS EC2.</p>
+                            <div class="spec-tags">
+                                <span class="spec-tag">Python</span>
+                                <span class="spec-tag">Discord.py</span>
+                                <span class="spec-tag">Telegram API</span>
+                                <span class="spec-tag">QR Code / 2FA</span>
+                                <span class="spec-tag">AWS EC2</span>
+                                <span class="spec-tag">Linux</span>
+                            </div>
+                        </article>
 
-    <section id="sobre" class="section-padding">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-4" data-aos="fade-right">
-                    <img src="https://avatars.githubusercontent.com/u/21108827?s=400&u=a4fb734211a612d0fa5287f53f7caf678251345f&v=4" 
-                         class="img-fluid rounded-circle" 
-                         alt="Foto de perfil de Jonathan Galdino, Desenvolvedor Back-End"
-                         loading="lazy"
-                         referrerpolicy="no-referrer">
-                </div>
-                <div class="col-md-8" data-aos="fade-left">
-                    <h2 class="mb-4" data-translate="aboutMe">Sobre Mim</h2>
-                    <p class="lead" data-translate="aboutText">Sou desenvolvedor back-end .NET e analista de sistemas, com experiência em C#, .NET 8, APIs REST, workers, SQL Server e PostgreSQL. Atualmente atuo em um portal de áudio com Angular 17 e processamento superior a 100 milhões de áudios, combinando integração de sistemas, otimização de consultas e modernização de aplicações.</p>
-                    <a href="CV-JONATHAN-HENRIQUE--FINAL.pdf" download class="btn btn-primary mt-3" id="cv-download" data-translate="downloadCV">
-                        <i class="fas fa-download me-2"></i><span>Baixar Currículo</span>
-                    </a>
-                    <a href="https://github.com/jhgaldino" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="btn btn-primary mt-3">
-                        <i class="fab fa-github me-2"></i>GitHub
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+                        <!-- Projeto 3: Restaurante XPTO -->
+                        <article class="featured-card">
+                            <div class="project-top">
+                                <span class="project-kicker" data-translate="proj3Meta">FULL STACK .NET // 03</span>
+                                <a href="https://github.com/jhgaldino/Xpto" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="repo-link">
+                                    <span>jhgaldino/Xpto</span>
+                                    <i class="ph ph-arrow-up-right ext-arrow" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <h3 data-translate="projectXPTOTitle">Restaurante XPTO</h3>
+                            <p class="project-desc" data-translate="projectXPTODesc">Sistema de pedidos e operações de restaurante com API REST em .NET e C#, front-end em Angular, validação de regras de negócio de pedidos e controle de janelas de horário por refeição.</p>
+                            <div class="spec-tags">
+                                <span class="spec-tag">.NET</span>
+                                <span class="spec-tag">C#</span>
+                                <span class="spec-tag">ASP.NET Core</span>
+                                <span class="spec-tag">Angular</span>
+                                <span class="spec-tag">TypeScript</span>
+                                <span class="spec-tag">REST API</span>
+                            </div>
+                        </article>
+                    </div>
 
-    <section id="habilidades" class="section-padding">
-        <div class="container">
-            <h2 class="text-center mb-5" data-aos="fade-up" data-translate="skills">Habilidades</h2>
-            <div class="skills-grid" data-aos="fade-up" data-aos-delay="200">
-                <div class="skill-category">
-                    <h5 class="skill-category-title" data-translate="skillCatBackend">Back-End</h5>
-                    <div class="skill-items">
-                        <div class="skill-item"><i class="devicon-csharp-plain colored"></i><span>C#</span></div>
-                        <div class="skill-item"><i class="devicon-dotnetcore-plain colored"></i><span>.NET</span></div>
-                        <div class="skill-item"><i class="devicon-dotnetcore-plain colored"></i><span>ASP.NET Core</span></div>
-                        <div class="skill-item"><i class="devicon-python-plain colored"></i><span>Python</span></div>
-                        <div class="skill-item"><i class="devicon-java-plain colored"></i><span>Java</span></div>
-                        <div class="skill-item"><i class="fas fa-exchange-alt"></i><span>APIs REST/SOAP</span></div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h5 class="skill-category-title" data-translate="skillCatDatabase">Banco de Dados</h5>
-                    <div class="skill-items">
-                        <div class="skill-item"><i class="devicon-microsoftsqlserver-plain colored"></i><span>SQL Server</span></div>
-                        <div class="skill-item"><i class="devicon-postgresql-plain colored"></i><span>PostgreSQL</span></div>
-                        <div class="skill-item"><i class="devicon-oracle-original colored"></i><span>Oracle DB</span></div>
-                        <div class="skill-item"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
-                        <div class="skill-item"><i class="devicon-dotnetcore-plain colored"></i><span>Entity Framework Core</span></div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h5 class="skill-category-title" data-translate="skillCatCloud">Cloud & DevOps</h5>
-                    <div class="skill-items">
-                        <div class="skill-item"><i class="devicon-amazonwebservices-plain-wordmark colored"></i><span>AWS</span></div>
-                        <div class="skill-item"><i class="devicon-git-plain colored"></i><span>Git</span></div>
-                        <div class="skill-item"><i class="devicon-docker-plain colored"></i><span>Docker</span></div>
-                        <div class="skill-item"><i class="devicon-azuredevops-plain colored"></i><span>Azure DevOps</span></div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h5 class="skill-category-title" data-translate="skillCatFrontend">Frontend</h5>
-                    <div class="skill-items">
-                        <div class="skill-item"><i class="devicon-angularjs-plain colored"></i><span>Angular</span></div>
-                        <div class="skill-item"><i class="devicon-typescript-plain colored"></i><span>TypeScript</span></div>
-                        <div class="skill-item"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
-                        <div class="skill-item"><i class="devicon-bootstrap-plain colored"></i><span>Bootstrap</span></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-
-    <section id="projetos" class="section-padding">
-    <div class="container">
-        <h2 class="text-center mb-5" data-aos="fade-up" data-translate="projects">Projetos</h2>
-        
-        <div class="projects-grid" data-aos="fade-up" data-aos-delay="200">
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6">
-                    <div class="card project-card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title" data-translate="projectPrevejaTitle">Preveja, Mercado de Previsões</h5>
-                            <p class="card-text" data-translate="projectPrevejaDesc">PWA full stack com API REST em .NET 9, Angular 18, PostgreSQL, Redis, SignalR, autenticação JWT e execução com Docker.</p>
-                            <div class="tech-tags"><span class="tech-tag">.NET 9</span><span class="tech-tag">Angular 18</span><span class="tech-tag">PostgreSQL</span><span class="tech-tag">Redis</span><span class="tech-tag">Docker</span></div>
-                            <a href="https://github.com/jhgaldino/Preveja" class="btn btn-primary" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" data-translate="projectButton">Ver Projeto</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card project-card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title" data-translate="projectXPTOTitle">Restaurante XPTO</h5>
-                            <p class="card-text" data-translate="projectXPTODesc">Sistema de gerenciamento de pedidos de restaurante, com API em .NET, front-end Angular, validação de pedidos e controle de horários de refeições.</p>
-                            <div class="tech-tags"><span class="tech-tag">.NET</span><span class="tech-tag">C#</span><span class="tech-tag">Angular</span></div>
-                            <a href="https://github.com/jhgaldino/Xpto" class="btn btn-primary" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" data-translate="projectButton">Ver Projeto</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card project-card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title" data-translate="projectAPITitle">API de Usuários</h5>
-                            <p class="card-text" data-translate="projectAPIDesc">API REST desenvolvida com ASP.NET Core para gerenciamento de usuários, incluindo autenticação e autorização.</p>
-                            <div class="tech-tags"><span class="tech-tag">ASP.NET Core</span><span class="tech-tag">C#</span><span class="tech-tag">REST</span></div>
-                            <a href="https://github.com/jhgaldino/UsuariosAPI-ViceriSeidor" class="btn btn-primary" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" data-translate="projectButton">Ver Projeto</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card project-card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title" data-translate="projectMicroblogTitle">Microblog Flask</h5>
-                            <p class="card-text" data-translate="projectMicroblogDesc">Microblog desenvolvido com Python, Flask e SQLite, com autenticação de usuários e publicação de posts.</p>
-                            <div class="tech-tags"><span class="tech-tag">Python</span><span class="tech-tag">Flask</span><span class="tech-tag">SQLite</span></div>
-                            <a href="https://github.com/jhgaldino/Microblog-Flask" class="btn btn-primary" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" data-translate="projectButton">Ver Projeto</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card project-card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title" data-translate="projectNeuralTitle">Redes Neurais</h5>
-                            <p class="card-text" data-translate="projectNeuralDesc">Implementação de redes neurais com Python, Pandas e PyTorch para previsão de resultados de partidas de futebol.</p>
-                            <div class="tech-tags"><span class="tech-tag">Python</span><span class="tech-tag">PyTorch</span><span class="tech-tag">Pandas</span></div>
-                            <a href="https://github.com/jhgaldino/Neural-Networks" class="btn btn-primary" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" data-translate="projectButton">Ver Projeto</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card project-card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title" data-translate="projectBotTitle">Bot de Integração Discord-Telegram</h5>
-                            <p class="card-text" data-translate="projectBotDesc">Bot desenvolvido com Python para integração entre os aplicativos Discord e Telegram.</p>
-                            <div class="tech-tags"><span class="tech-tag">Python</span><span class="tech-tag">Discord.py</span><span class="tech-tag">AWS EC2</span></div>
-                            <a href="https://github.com/jhgaldino/discord_telegram_bot" class="btn btn-primary" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" data-translate="projectButton">Ver Projeto</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card project-card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title" data-translate="projectWebScrapTitle">Web Scraping com Python</h5>
-                            <p class="card-text" data-translate="projectWebScrapDesc">Extração e organização de dados de um site de saúde com Python e BeautifulSoup.</p>
-                            <div class="tech-tags"><span class="tech-tag">Python</span><span class="tech-tag">BeautifulSoup</span></div>
-                            <a href="https://github.com/jhgaldino/WebScrapping" class="btn btn-primary" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" data-translate="projectButton">Ver Projeto</a>
+                    <!-- Arquivo de outros projetos -->
+                    <div class="archive-block">
+                        <h3 class="archive-heading" data-translate="archiveTitle">ARQUIVO // OUTROS PROJETOS E EXPERIMENTOS</h3>
+                        <div class="archive-list">
+                            <a href="https://github.com/jhgaldino/UsuariosAPI-ViceriSeidor" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="archive-row">
+                                <span class="archive-name" data-translate="projectAPITitle">API de Usuários</span>
+                                <span class="archive-desc" data-translate="projectAPIDesc">API REST em ASP.NET Core para gestão de usuários, autenticação e autorização.</span>
+                                <span class="archive-stack">ASP.NET Core · C# · REST</span>
+                                <i class="ph ph-arrow-up-right ext-arrow" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://github.com/jhgaldino/Neural-Networks" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="archive-row">
+                                <span class="archive-name" data-translate="projectNeuralTitle">Redes Neurais (Futebol)</span>
+                                <span class="archive-desc" data-translate="projectNeuralDesc">Modelo preditivo de resultados de partidas de futebol com PyTorch e Pandas.</span>
+                                <span class="archive-stack">Python · PyTorch · Pandas</span>
+                                <i class="ph ph-arrow-up-right ext-arrow" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://github.com/jhgaldino/Microblog-Flask" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="archive-row">
+                                <span class="archive-name" data-translate="projectMicroblogTitle">Microblog Flask</span>
+                                <span class="archive-desc" data-translate="projectMicroblogDesc">Aplicação web com autenticação de usuários e publicação de posts.</span>
+                                <span class="archive-stack">Python · Flask · SQLite</span>
+                                <i class="ph ph-arrow-up-right ext-arrow" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://github.com/jhgaldino/WebScrapping" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="archive-row">
+                                <span class="archive-name" data-translate="projectWebScrapTitle">Web Scraping Saúde</span>
+                                <span class="archive-desc" data-translate="projectWebScrapDesc">Extração e organização estruturada de dados de portal de saúde.</span>
+                                <span class="archive-stack">Python · BeautifulSoup</span>
+                                <i class="ph ph-arrow-up-right ext-arrow" aria-hidden="true"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-    <section id="experiencia" class="section-padding">
-        <div class="container">
-            <h2 class="text-center mb-5" data-aos="fade-up" data-translate="experience">Experiência Profissional</h2>
-
-            <div class="timeline" data-aos="fade-up" data-aos-delay="200">
-                <div class="timeline-item">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center mb-3">
-                                <i class="fas fa-briefcase fa-2x me-3 text-primary"></i>
-                                <div>
-                                    <h5 class="card-title mb-0" data-translate="job1Title">Mid-Level Full Stack Developer</h5>
-                                    <h6 class="card-subtitle text-muted" data-translate="job1Company">Atento · Tempo integral</h6>
-                                </div>
-                            </div>
-                            <p class="text-muted mb-2"><i class="fas fa-calendar-alt me-2"></i><span data-translate="job1Period">Jun 2026 - Atual</span></p>
-                            <p class="text-muted mb-2"><i class="fas fa-map-marker-alt me-2"></i><span data-translate="job1Location">Remoto · sede em São Caetano do Sul, SP</span></p>
-                            <p class="card-text" data-translate="job1Desc">Atuação em portal de áudio com API REST e back-end .NET 8, Angular 17 e SQL Server. Implementação de cliente e endpoints HCP, adaptação de workers e otimização de consultas com SET STATISTICS e índices em um fluxo superior a 100 milhões de áudios.</p>
-                        </div>
-                    </div>
+        <!-- [04] MATRIZ TÉCNICA -->
+        <section id="habilidades" class="spec-section">
+            <div class="container section-layout">
+                <div class="section-rail">
+                    <span class="section-tag" data-translate="railStackTag">[04] // MATRIZ TÉCNICA</span>
+                    <h2 data-translate="skillsTitle">Stack &amp; Ferramentas</h2>
+                    <p class="rail-note" data-translate="railStackNote">Tecnologias aplicadas em ambiente de produção e projetos independentes.</p>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center mb-3">
-                                <i class="fas fa-briefcase fa-2x me-3 text-primary"></i>
-                                <div>
-                                    <h5 class="card-title mb-0" data-translate="job2Title">Analista Desenvolvedor Júnior</h5>
-                                    <h6 class="card-subtitle text-muted" data-translate="job2Company">Qintess · Tempo integral</h6>
-                                </div>
+                <div class="section-body">
+                    <div class="matrix-table">
+                        <div class="matrix-row">
+                            <div class="matrix-cat" data-translate="skillCatBackend">Back-end &amp; APIs</div>
+                            <div class="matrix-items">
+                                <span class="tech-chip"><i class="devicon-csharp-plain colored" aria-hidden="true"></i>C#</span>
+                                <span class="tech-chip"><i class="devicon-dotnetcore-plain colored" aria-hidden="true"></i>.NET 8 / 9</span>
+                                <span class="tech-chip"><i class="devicon-dot-net-plain colored" aria-hidden="true"></i>.NET Framework</span>
+                                <span class="tech-chip"><i class="devicon-dotnetcore-plain colored" aria-hidden="true"></i>ASP.NET Core</span>
+                                <span class="tech-chip" data-translate="tagRestSoap">APIs REST &amp; SOAP</span>
+                                <span class="tech-chip">Clean Architecture</span>
+                                <span class="tech-chip">xUnit</span>
+                                <span class="tech-chip"><i class="devicon-python-plain colored" aria-hidden="true"></i>Python</span>
+                                <span class="tech-chip"><i class="devicon-java-plain colored" aria-hidden="true"></i>Java</span>
                             </div>
-                            <p class="text-muted mb-2"><i class="fas fa-calendar-alt me-2"></i><span data-translate="job2Period">Fev 2025 - Jan 2026</span></p>
-                            <p class="text-muted mb-2"><i class="fas fa-map-marker-alt me-2"></i><span data-translate="job2Location">Remoto · sede em Brasília, DF</span></p>
-                            <p class="card-text" data-translate="job2Desc">Desenvolvimento, manutenção e modernização do SIPRA do INCRA com .NET, ASP Clássico, SQL Server e PostgreSQL. Criação de procedures, scripts e rotinas ETL, migração de relatórios para HTML e correção de falhas com Git e GitLab.</p>
                         </div>
-                    </div>
-                </div>
 
-                <div class="timeline-item">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center mb-3">
-                                <i class="fas fa-briefcase fa-2x me-3 text-primary"></i>
-                                <div>
-                                    <h5 class="card-title mb-0" data-translate="job3Title">Desenvolvedor Back-end .NET</h5>
-                                    <h6 class="card-subtitle text-muted" data-translate="job3Company">Viceri SEIDOR · Trainee</h6>
-                                </div>
+                        <div class="matrix-row">
+                            <div class="matrix-cat" data-translate="skillCatDatabase">Dados &amp; Persistência</div>
+                            <div class="matrix-items">
+                                <span class="tech-chip"><i class="devicon-microsoftsqlserver-plain colored" aria-hidden="true"></i>SQL Server</span>
+                                <span class="tech-chip"><i class="devicon-postgresql-plain colored" aria-hidden="true"></i>PostgreSQL</span>
+                                <span class="tech-chip"><i class="devicon-oracle-original colored" aria-hidden="true"></i>Oracle DB</span>
+                                <span class="tech-chip"><i class="devicon-mysql-plain colored" aria-hidden="true"></i>MySQL</span>
+                                <span class="tech-chip"><i class="devicon-sqlite-plain colored" aria-hidden="true"></i>SQLite</span>
+                                <span class="tech-chip">Entity Framework Core</span>
+                                <span class="tech-chip">Procedures &amp; ETL</span>
+                                <span class="tech-chip">Tuning (SET STATISTICS)</span>
                             </div>
-                            <p class="text-muted mb-2"><i class="fas fa-calendar-alt me-2"></i><span data-translate="job3Period">Jun 2024 - Dez 2024</span></p>
-                            <p class="text-muted mb-2"><i class="fas fa-map-marker-alt me-2"></i><span data-translate="job3Location">Jundiaí, SP - Híbrido</span></p>
-                            <p class="card-text" data-translate="job3Desc">Desenvolvimento e sustentação de sistemas para seguros com ASP.NET, C#, Angular, SQL Server, Oracle DB e APIs SOAP. Migração de SQL Server 2014 para 2022 e atuação com Scrum, Azure DevOps, Bitbucket e Git.</p>
                         </div>
-                    </div>
-                </div>
 
-                <div class="timeline-item">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center mb-3">
-                                <i class="fas fa-briefcase fa-2x me-3 text-primary"></i>
-                                <div>
-                                    <h5 class="card-title mb-0" data-translate="job4Title">Desenvolvedor Júnior</h5>
-                                    <h6 class="card-subtitle text-muted" data-translate="job4Company">Tatsoft · Tempo integral</h6>
-                                </div>
+                        <div class="matrix-row">
+                            <div class="matrix-cat" data-translate="skillCatProcessing">Processamento &amp; Integração</div>
+                            <div class="matrix-items">
+                                <span class="tech-chip">Background Workers</span>
+                                <span class="tech-chip" data-translate="tagSqlQueues">Filas SQL Server</span>
+                                <span class="tech-chip"><i class="devicon-redis-plain colored" aria-hidden="true"></i>Redis</span>
+                                <span class="tech-chip">SignalR</span>
+                                <span class="tech-chip">HCP</span>
+                                <span class="tech-chip">XML</span>
+                                <span class="tech-chip">MQTT Sparkplug B</span>
+                                <span class="tech-chip">Modbus</span>
                             </div>
-                            <p class="text-muted mb-2"><i class="fas fa-calendar-alt me-2"></i><span data-translate="job4Period">Dez 2022 - Jan 2024</span></p>
-                            <p class="text-muted mb-2"><i class="fas fa-map-marker-alt me-2"></i><span data-translate="job4Location">Remoto</span></p>
-                            <p class="card-text" data-translate="job4Desc">Manutenção evolutiva e corretiva de produtos SCADA com .NET Framework, C#, SQLite e SQL Server. Testes de integrações industriais, suporte a clientes nacionais e internacionais e produção de documentação técnica.</p>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="educacao" class="section-padding">
-        <div class="container">
-            <h2 class="text-center mb-5" data-aos="fade-up" data-translate="education">Educação</h2>
-            
-            <!-- Educação -->
-            <div class="row mb-5">
-                <div class="col-md-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center mb-3">
-                                <i class="fas fa-graduation-cap fa-2x me-3"></i>
-                                <div>
-                                    <h4 class="card-title" data-translate="bachelor">Bacharelado em Ciência da Computação</h4>
-                                    <h6 class="card-subtitle mb-2 text-muted" data-translate="university">Instituto Federal do Triângulo Mineiro - Campus Ituiutaba - Ituiutaba, Minas Gerais - Brasil </h6>
-                                </div>
+                        <div class="matrix-row">
+                            <div class="matrix-cat" data-translate="skillCatFrontend">Front-end</div>
+                            <div class="matrix-items">
+                                <span class="tech-chip"><i class="devicon-angularjs-plain colored" aria-hidden="true"></i>Angular 17 / 18</span>
+                                <span class="tech-chip"><i class="devicon-typescript-plain colored" aria-hidden="true"></i>TypeScript</span>
+                                <span class="tech-chip"><i class="devicon-javascript-plain colored" aria-hidden="true"></i>JavaScript</span>
+                                <span class="tech-chip"><i class="devicon-angularmaterial-plain colored" aria-hidden="true"></i>Angular Material</span>
+                                <span class="tech-chip"><i class="devicon-html5-plain colored" aria-hidden="true"></i>HTML5 / CSS3</span>
+                            </div>
+                        </div>
+
+                        <div class="matrix-row">
+                            <div class="matrix-cat" data-translate="skillCatCloud">Cloud &amp; Engenharia</div>
+                            <div class="matrix-items">
+                                <span class="tech-chip"><i class="devicon-amazonwebservices-plain-wordmark colored" aria-hidden="true"></i>AWS (EC2)</span>
+                                <span class="tech-chip"><i class="devicon-docker-plain colored" aria-hidden="true"></i>Docker</span>
+                                <span class="tech-chip"><i class="devicon-git-plain colored" aria-hidden="true"></i>Git</span>
+                                <span class="tech-chip"><i class="devicon-gitlab-plain colored" aria-hidden="true"></i>GitLab</span>
+                                <span class="tech-chip"><i class="devicon-azuredevops-plain colored" aria-hidden="true"></i>Azure DevOps</span>
+                                <span class="tech-chip"><i class="devicon-bitbucket-original colored" aria-hidden="true"></i>Bitbucket</span>
+                                <span class="tech-chip">CI/CD</span>
+                                <span class="tech-chip">Scrum</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div id="certificacoes" class="section-padding">
-            <h3 class="text-center mb-4" data-aos="fade-up" data-translate="certifications">Certificações</h3>
-            <div class="row g-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <i class="fab fa-aws fa-2x mb-3"></i>
-                            <h5 class="card-title">AWS Certified Cloud Practitioner</h5>
-                            <p class="card-text">Amazon · 2024</p>
-                        </div>
-                    </div>
+        <!-- [05] FORMAÇÃO & CERTIFICAÇÕES -->
+        <section id="educacao" class="spec-section">
+            <div class="container section-layout">
+                <div class="section-rail">
+                    <span class="section-tag" data-translate="railEduTag">[05] // BASE &amp; CREDENCIAIS</span>
+                    <h2 data-translate="educationTitle">Formação &amp; Certificações</h2>
                 </div>
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <i class="fas fa-database fa-2x mb-3"></i>
-                            <h5 class="card-title">PostgreSQL Essential Training</h5>
-                            <p class="card-text">LinkedIn · 2022</p>
+
+                <div class="section-body">
+                    <div class="edu-grid">
+                        <div class="edu-col">
+                            <h3 class="edu-col-title" data-translate="eduAcademicHeader">FORMAÇÃO ACADÊMICA</h3>
+                            <div class="edu-list">
+                                <article class="edu-item">
+                                    <span class="edu-year">2017 - 2022</span>
+                                    <h4 data-translate="bachelor">Bacharelado em Ciência da Computação</h4>
+                                    <p data-translate="university">Instituto Federal do Triângulo Mineiro (IFTM) · Campus Ituiutaba, MG</p>
+                                </article>
+                                <article class="edu-item">
+                                    <span class="edu-year">2014 - 2015</span>
+                                    <h4 data-translate="technicalSchool">Ensino Médio Técnico em Informática</h4>
+                                    <p data-translate="technicalSchoolPlace">ETEC Vasco Antônio Venchiarutti · Jundiaí, SP</p>
+                                </article>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <i class="fas fa-code fa-2x mb-3"></i>
-                            <h5 class="card-title">Bootcamp GFT Start .NET #4</h5>
-                            <p class="card-text">DIO · 2022</p>
+
+                        <div class="edu-col">
+                            <h3 class="edu-col-title" data-translate="certHeader">CERTIFICAÇÕES</h3>
+                            <div class="edu-list">
+                                <article class="edu-item is-featured-cert">
+                                    <div class="cert-meta">
+                                        <span class="edu-year">2024</span>
+                                        <span class="cert-badge" data-translate="certCloudBadge">CLOUD</span>
+                                    </div>
+                                    <h4>AWS Certified Cloud Practitioner</h4>
+                                    <p>Amazon Web Services</p>
+                                </article>
+                                <article class="edu-item">
+                                    <span class="edu-year">2022</span>
+                                    <h4>PostgreSQL Essential Training</h4>
+                                    <p>LinkedIn Learning</p>
+                                </article>
+                                <article class="edu-item">
+                                    <span class="edu-year">2022</span>
+                                    <h4>Bootcamps GFT Start .NET #4 &amp; GFT C#</h4>
+                                    <p>DIO</p>
+                                </article>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
+
+        <!-- [06] CONTATO -->
+        <section id="contato" class="spec-section">
+            <div class="container section-layout">
+                <div class="section-rail">
+                    <span class="section-tag" data-translate="railContactTag">[06] // CONTATO DIRETO</span>
+                    <h2 data-translate="contactTitle">Canais &amp; Currículo</h2>
+                    <p class="rail-note" data-translate="contactText">Disponível para oportunidades back-end .NET, full stack e projetos de arquitetura ou integração de sistemas.</p>
+                </div>
+
+                <div class="section-body">
+                    <div class="contact-channels">
+                        <a href="mailto:contato.jhgs@gmail.com" class="channel-row">
+                            <span class="channel-key" data-translate="channelEmail">E-MAIL</span>
+                            <span class="channel-val">contato.jhgs@gmail.com</span>
+                            <i class="ph ph-arrow-up-right ext-arrow" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/jhgaldino" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="channel-row">
+                            <span class="channel-key" data-translate="channelLinkedin">LINKEDIN</span>
+                            <span class="channel-val">linkedin.com/in/jhgaldino</span>
+                            <i class="ph ph-arrow-up-right ext-arrow" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://github.com/jhgaldino" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="channel-row">
+                            <span class="channel-key" data-translate="channelGithub">GITHUB</span>
+                            <span class="channel-val">github.com/jhgaldino</span>
+                            <i class="ph ph-arrow-up-right ext-arrow" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://wa.me/5511941069442" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="channel-row">
+                            <span class="channel-key" data-translate="channelWhatsapp">WHATSAPP</span>
+                            <span class="channel-val">+55 11 94106-9442</span>
+                            <i class="ph ph-arrow-up-right ext-arrow" aria-hidden="true"></i>
+                        </a>
+                        <a href="CV-JONATHAN-HENRIQUE--FINAL.pdf" download class="channel-row is-cv-row" id="cv-download-footer">
+                            <span class="channel-key" data-translate="channelCv">CURRÍCULO (PDF)</span>
+                            <span class="channel-val" id="cv-filename-label">CV-JONATHAN-HENRIQUE--FINAL.pdf</span>
+                            <i class="ph ph-download-simple ext-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <span>&copy; 2026 Jonathan Henrique Galdino da Silva · <span data-translate="footerRights">Todos os direitos reservados.</span></span>
+            <span class="footer-loc" data-translate="footerLoc">Jundiaí, SP · Brasil</span>
         </div>
-    </section>
-
-    <section id="contato" class="section-padding">
-        <div class="container text-center">
-            <h2 class="mb-5" data-aos="fade-up" data-translate="contact">Contato</h2>
-            
-            <p class="lead mb-4" data-aos="fade-up" data-aos-delay="100" data-translate="contactText">Entre em contato comigo através das redes sociais abaixo</p>
-            
-            <div class="social-links" data-aos="fade-up" data-aos-delay="200">
-                <a href="https://wa.me/5511941069442" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="social-icon" aria-label="Entrar em contato pelo WhatsApp">
-                    <i class="fab fa-whatsapp fa-2x" aria-hidden="true"></i>
-                </a>
-                <a href="mailto:contato.jhgs@gmail.com" class="social-icon" aria-label="Enviar e-mail para Jonathan">
-                    <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/jhgaldino" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="social-icon" aria-label="Perfil do LinkedIn de Jonathan Galdino">
-                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
-                </a>
-                <a href="https://www.instagram.com/poliekos" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" class="social-icon" aria-label="Perfil do Instagram de Jonathan">
-                    <i class="fab fa-instagram fa-2x" aria-hidden="true"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Jonathan Galdino. <span data-translate="footer">Todos os direitos reservados.</span></p>
     </footer>
 
-    <button id="backToTop" class="back-to-top">
-        <i class="fas fa-arrow-up"></i>
+    <button type="button" id="backToTop" class="back-to-top" aria-label="Voltar ao topo">
+        <i class="ph ph-arrow-up" aria-hidden="true"></i>
     </button>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
